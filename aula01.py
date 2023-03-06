@@ -8,3 +8,4 @@
 # raiz = math.sqrt(valor)
 # print("A raiz de ", valor, "é", raiz)
 
+print("olá mundo novamente")
