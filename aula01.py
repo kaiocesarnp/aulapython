@@ -1,17 +1,15 @@
-#essa é uma linha de comentário
+#essa é uma linha de comentário. Jogo da velha serve para comentar no python
 
 # letra = 'a'
 # print(10*letra)
 
-# import math
-# valor = 4
-# raiz = math.sqrt(valor)
-# print("A raiz de ", valor, "é", raiz)
+# nome = input("Digite seu nome: ")
+# idade = int(input("Qual a sua idade?: "))
+# aposentadoria = int(input("Com qual idade você espera se aposentar?: "))
+# anos_faltantes = aposentadoria - idade
+# print(nome, "faltam", anos_faltantes, "anos para você se aposentar!")
 
-# print("olá mundo novamente")
-
-nome = input("Digite seu nome: ")
-idade = int(input("Qual a sua idade?: "))
-aposentadoria = int(input("Com qual idade você espera se aposentar?: "))
-anos_faltantes = aposentadoria - idade
-print(nome, "faltam", anos_faltantes, "anos para você se aposentar!")
+import math
+num = int(input("Digite um numero inteiro: "))
+raiz = math.sqrt(num)
+print("A raiz de", num, "é", raiz)
