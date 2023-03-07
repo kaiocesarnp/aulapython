@@ -84,3 +84,12 @@
 # -------------------------
 
 # Questão 09
+
+# import pandas as pd
+# import matplotlib.pyplot as plt
+
+# dados = {'T1': [1, 0, 2], 'T2': [0, 3, 0], 'T3': [1, 1, 1]}
+
+# df = pd.DataFrame(dados)
+# df.plot(kind='bar')
+# plt.show()
