@@ -90,6 +90,33 @@
 # for i in range(len(palavra)):
 #     print(palavra)
 
-palavra = "Python"
-for letra in palavra:
-    print(letra)
+
+#--------------------
+# palavra = "Python"
+# for letra in palavra:
+#     print(letra)
+
+#--------------------
+#Estrutura de repetição WHILE
+# n = int(input("Digite um número inteiro: "))
+# while (n > 0):
+#     print(0)
+#     n -= 1
+# print("Tempo esgotato!")
+
+#--------------------
+#Forçando a saída de um laço
+# while(True):
+#     letra = input("Digite uma letra diferente de 'q': ")
+#     if(letra == 'q'):
+#         break
+#     print("Você digitou a letra 'q'!")
+
+
+cond = True
+while(cond):
+    opcao = input("Digite 'sair' para terminar o laço: ")
+    if opcao == 'sair':
+        cond = False
+    else:
+        print("Ainda no laço...")
