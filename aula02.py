@@ -48,15 +48,27 @@
 
 #----------------------------
 
-opcao = input("Forma de pagamento [c|d|b|o]:")
+# opcao = input("Forma de pagamento [c|d|b|o]:")
 
-if(opcao == 'c'):
-    print("Pagamento no crédito sem desconto.")
-elif(opcao == 'd'):
-    print("Pagamento no débito com 3% de desconto.")
-elif(opcao == 'b'):
-    print("Pagamento no boleto com 5% de desconto.")
-elif(opcao == 'o'):
-    print("PAgamento em dinheiro com 10% de desconto.")
+# if(opcao == 'c'):
+#     print("Pagamento no crédito sem desconto.")
+# elif(opcao == 'd'):
+#     print("Pagamento no débito com 3% de desconto.")
+# elif(opcao == 'b'):
+#     print("Pagamento no boleto com 5% de desconto.")
+# elif(opcao == 'o'):
+#     print("PAgamento em dinheiro com 10% de desconto.")
+# else:
+#     print("Opção '{}' não cadastrada".format(opcao))
+
+#----------------------------
+
+idade = int(input("Digite sua idade: "))
+if (idade >= 16):
+    print("Você já pode votar se tiver título de eleitor.")
+    if (idade >= 18 and idade <= 70):
+        print("Se você é alfabetizado, seu voto é obrigatório!")
+    else:
+        print("Seu voto é facultativo.")
 else:
-    print("Opção '{}' não cadastrada".format(opcao))
+    print("Você ainda não pode votar...")
