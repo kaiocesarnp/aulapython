@@ -28,8 +28,35 @@
 
 #---------------------------
 
-idade = int(input("Digite sua idade: "))
-if (idade >= 16):
-    print("Você pode votar!")
+# idade = int(input("Digite sua idade: "))
+# if (idade >= 16):
+#     print("Você pode votar!")
+# else:
+#     print("Você ainda não pode votar!")
+
+#---------------------------
+
+# a = int(input("Digite o valor de 'A': "))
+# b = int(input("Digite o valor de 'B': "))
+
+# if(a > b):
+#     print("A é maior do que B ({} > {})". format(a,b))
+# elif(a < b):
+#     print("B é maior do que A ({} > {})". format(b,a))
+# else:
+#     print("A e B são iguais!")
+
+#----------------------------
+
+opcao = input("Forma de pagamento [c|d|b|o]:")
+
+if(opcao == 'c'):
+    print("Pagamento no crédito sem desconto.")
+elif(opcao == 'd'):
+    print("Pagamento no débito com 3% de desconto.")
+elif(opcao == 'b'):
+    print("Pagamento no boleto com 5% de desconto.")
+elif(opcao == 'o'):
+    print("PAgamento em dinheiro com 10% de desconto.")
 else:
-    print("Você ainda não pode votar!")
+    print("Opção '{}' não cadastrada".format(opcao))
