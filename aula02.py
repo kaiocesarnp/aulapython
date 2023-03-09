@@ -63,12 +63,33 @@
 
 #----------------------------
 
-idade = int(input("Digite sua idade: "))
-if (idade >= 16):
-    print("Você já pode votar se tiver título de eleitor.")
-    if (idade >= 18 and idade <= 70):
-        print("Se você é alfabetizado, seu voto é obrigatório!")
-    else:
-        print("Seu voto é facultativo.")
-else:
-    print("Você ainda não pode votar...")
+# idade = int(input("Digite sua idade: "))
+# if (idade >= 16):
+#     print("Você já pode votar se tiver título de eleitor.")
+#     if (idade >= 18 and idade <= 70):
+#         print("Se você é alfabetizado, seu voto é obrigatório!")
+#     else:
+#         print("Seu voto é facultativo.")
+# else:
+#     print("Você ainda não pode votar...")
+
+#----------------------------
+#Estruturas de repetição FOR
+# for i in range(6):
+#     print(i)
+
+#-----------------
+# palavra = "Python"
+# n = len(palavra) #a função 'len' mede o tamanho/cumprimento
+# for i in range(n):
+#     print(i)
+
+#---------------------
+#imprimir a palavra o numero de vezes correspondentes às letras que tem nela
+# palavra = "Python"
+# for i in range(len(palavra)):
+#     print(palavra)
+
+palavra = "Python"
+for letra in palavra:
+    print(letra)
