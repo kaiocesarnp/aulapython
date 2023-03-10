@@ -210,18 +210,19 @@
 #         print("Pode dirigir, mas não comprar álcool nos EUA")
 
 # -----------------------------
-contador_pares = 0
-contador_impares = 0
+# Questão 05
+# contador_pares = 0
+# contador_impares = 0
 
-for i in range(34):
-    entrada = input('Digite um numero: ')
+# for i in range(34):
+#     entrada = input('Digite um numero: ')
 
-    numero = int(entrada)
+#     numero = int(entrada)
 
-    if numero % 2 == 0:
-        contador_pares += 1
-    else:
-        contador_impares += 1
+#     if numero % 2 == 0:
+#         contador_pares += 1
+#     else:
+#         contador_impares += 1
 
-print('Quantidade pares:', contador_pares)
-print('Quantidade impares:', contador_impares)
+# print('Quantidade pares:', contador_pares)
+# print('Quantidade impares:', contador_impares)
