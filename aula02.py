@@ -113,10 +113,115 @@
 #     print("Você digitou a letra 'q'!")
 
 
-cond = True
-while(cond):
-    opcao = input("Digite 'sair' para terminar o laço: ")
-    if opcao == 'sair':
-        cond = False
+# cond = True
+# while(cond):
+#     opcao = input("Digite 'sair' para terminar o laço: ")
+#     if opcao == 'sair':
+#         cond = False
+#     else:
+#         print("Ainda no laço...")
+
+# -----------------------------
+
+#Questão 01
+# Associe o que cada código abaixo imprime após execução (código separado por cores pra facilitar a visualização)
+
+# i = 0
+# while i <= 10:
+#     print(i)
+#     i += 1
+
+# for num in range(10):
+#     if (num%2 == 0):
+#         print(num)
+
+# n = 2
+# for i in range(10):
+#     produto = n*i
+#     print(produto)
+
+# for i in range(10):
+#     print(i)
+
+# -------------------------
+
+# Questão 02
+# Assinale correto ou incorreto. Considere o código abaixo e assinale o que cada conjunto de variáveis imprime 
+# (cada conjunto separado por uma cor diferente).
+
+# if(aparelho == 'tv'):
+#     if(marca == 'sony'):
+#         if(tamanho == 48):
+
+#             print('Equipamento:' aparelho, marca, tamanho)
+
+# else: 
+
+#     tamanho = 50
+
+# elif(marca == 'samsung'):
+
+#     print('Equipamento:' aparelho, marca, tamanho)
+
+# else:
+
+#     print('Equipamento:' aparelho, marca, tamanho)
+
+# ------------------------
+
+# Questão 03
+# Assinale "TRUE" ou "FALSE" abaixo, de acordo com a saída esperada do interpretador Python.
+
+# carro = 'honda'
+# not (carro == 'honda'  or  carro == 'toyota')
+
+# carro = 'honda'
+# not (carro == 'honda'  and  carro == 'toyota')
+
+# carro = 'honda'
+# (carro == 'honda'  and  carro == 'toyota')
+
+# carro = 'honda'
+# (carro == 'honda'  or  carro == 'toyota')
+
+# carro = 'honda'
+# cor = 'prata'
+# (carro == 'honda'  or  carro == 'toyota') and (cor == 'prata')
+
+# ---------------------------
+# Questão 04
+# Considere os comandos abaixo e responda o que imprime (múltipla escolha):
+
+# idade = int(input("Digite sua idade: "))
+
+# if idade >= 18:
+#         print("Pode dirigir no Brasil...")
+
+# if idade < 18:
+
+#         print("Não pode dirigir no Brasil!")
+
+# if idade > 15:
+
+#         print("Pode dirigir nos EUA...")
+
+# if idade >= 16 and idade < 21:
+
+#         print("Pode dirigir, mas não comprar álcool nos EUA")
+
+# -----------------------------
+contador_pares = 0
+contador_impares = 0
+
+for i in range(34):
+    entrada = input('Digite um numero: ')
+
+    numero = int(entrada)
+
+    if numero % 2 == 0:
+        contador_pares += 1
     else:
-        print("Ainda no laço...")
+        contador_impares += 1
+
+print('Quantidade pares:', contador_pares)
+print('Quantidade impares:', contador_impares)
