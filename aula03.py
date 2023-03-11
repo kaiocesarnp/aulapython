@@ -9,4 +9,8 @@ lista_compras = ["maçãs", "leite", "arroz", "frango"]
 for item in lista_compras:
     print("Comprar:", item)
 
+print("O primeiro elemento é:", lista_compras[0])
+print("O primeiro terceiro é:", lista_compras[2])
+
+
     
