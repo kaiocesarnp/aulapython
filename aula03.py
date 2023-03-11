@@ -5,7 +5,7 @@
 
 
 
-lista_compras = ["maçãs", "leite", "arroz", "frango"]
+lista_compras = ["maçãs", "leite", "arroz", "frango", "banana"]
 
 for item in lista_compras:
     print("Comprar:", item)
@@ -19,5 +19,10 @@ tamanho = len(lista_compras)
 print("Tamanho:", tamanho)
 
 # Pode-se usar o tamanho 'len' da lista para acessar o ultimo elemento da lista, por exemplo
+print("Ultimo:", lista_compras[len(lista_compras)-1])
+
+for i in range(len(lista_compras)):
+    print("O elemento", i, "da lista é", lista_compras[i])
+
 
     
