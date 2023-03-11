@@ -30,11 +30,18 @@ lista_compras = ["maçãs", "leite", "arroz", "frango", "banana"]
 #     i = i + 1
     
 # Pegando uma parte da lista/intervalo
-sublista = lista_compras[1:4]
-print("Sublista")
-for item in sublista:
-    print(item)
+# sublista = lista_compras[1:4]
+# print("Sublista")
+# for item in sublista:
+#     print(item)
 
-print("Outra forma")
-for item in lista_compras[2:6]:
+# print("Outra forma")
+# for item in lista_compras[2:6]:
+#     print(item)
+
+# Alterando item da lista
+lista_compras[0] = "batatas"
+lista_compras[1] = "laranjas"
+
+for item in lista_compras:
     print(item)
