@@ -5,7 +5,7 @@
 
 
 
-lista_compras = ["maçãs", "leite", "arroz", "frango", "banana"]
+# lista_compras = ["maçãs", "leite", "arroz", "frango", "banana"]
 
 # for item in lista_compras:
 #     print("Comprar:", item)
@@ -40,8 +40,27 @@ lista_compras = ["maçãs", "leite", "arroz", "frango", "banana"]
 #     print(item)
 
 # Alterando item da lista
-lista_compras[0] = "batatas"
-lista_compras[1] = "laranjas"
+# lista_compras[0] = "batatas"
+# lista_compras[1] = "laranjas"
 
-for item in lista_compras:
-    print(item)
+# for item in lista_compras:
+#     print(item)
+
+#-------------
+
+# FUNÇÕES DE LISTAS
+
+    # Indices e contagens
+
+# função 'count' conta quantas vezes determinado elemento aparece na lista
+# função 'index' mostra em qual indice da lista o elemento se encontra 
+        # nessa chamada que será passada, o 'index' retornará o primeiro indice
+
+lista_compras = ["maças", "leite", "arroz", "frango", "leite", "trigo"]
+
+qtde_vezes = lista_compras.count('leite')
+idx = lista_compras.index('leite')
+
+print("Quantidade: ", qtde_vezes)
+print("Primeiro idx: ", idx)
+
