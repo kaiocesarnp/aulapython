@@ -70,9 +70,10 @@
 
 lista_compras = ["maças", "leite", "arroz", "frango", "trigo"]
 
-lista_compras.sort()
+# lista_compras.sort()
+lista_compras.sort(reverse=True) # reverse=True inverte a ordem
 
-print("Lista")
+print("Lista:")
 for item in lista_compras:
     print(item)
 
