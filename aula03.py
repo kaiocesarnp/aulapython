@@ -81,8 +81,20 @@
 
 # Função 'del' exclui um elemento da lista por indice
 
+# lista_compras = ["maças", "leite", "arroz", "frango", "trigo"]
+
+# del lista_compras[1]
+# for item in lista_compras:
+#     print(item)
+
+# ------------------------------
+
+# Função "remove(conteudo)" remove o PRIMEIRO elemento com o conteudo especificado
+# Função "pop()" remove o último elemento da lista
+
 lista_compras = ["maças", "leite", "arroz", "frango", "trigo"]
 
-del lista_compras[1]
+lista_compras.remove("arroz")
+lista_compras.pop()
 for item in lista_compras:
     print(item)
