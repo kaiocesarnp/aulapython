@@ -68,12 +68,21 @@
 
 # Função 'sort' ordena a lista... como são todas strings, nesse caso será em ordem alfabetica
 
+# lista_compras = ["maças", "leite", "arroz", "frango", "trigo"]
+
+# # lista_compras.sort()
+# lista_compras.sort(reverse=True) # reverse=True inverte a ordem
+
+# print("Lista:")
+# for item in lista_compras:
+#     print(item)
+
+#-------------------------
+
+# Função 'del' exclui um elemento da lista por indice
+
 lista_compras = ["maças", "leite", "arroz", "frango", "trigo"]
 
-# lista_compras.sort()
-lista_compras.sort(reverse=True) # reverse=True inverte a ordem
-
-print("Lista:")
+del lista_compras[1]
 for item in lista_compras:
     print(item)
-
