@@ -112,3 +112,16 @@
 # for item in lista_compras:
 #     print(item)
 
+#--------------------------------
+
+# Criando uma lista vazia
+
+lista_compras = [] # lista vazia
+
+item = input("Digite um item ou sair: ")
+while item != "sair":
+    lista_compras.append(item)
+    item = input("Digite um item ou sair: ")
+
+for it in lista_compras:
+    print(it)
