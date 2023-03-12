@@ -116,12 +116,23 @@
 
 # Criando uma lista vazia
 
-lista_compras = [] # lista vazia
+# lista_compras = [] # lista vazia
 
-item = input("Digite um item ou sair: ")
-while item != "sair":
-    lista_compras.append(item)
-    item = input("Digite um item ou sair: ")
+# item = input("Digite um item ou sair: ")
+# while item != "sair":
+#     lista_compras.append(item)
+#     item = input("Digite um item ou sair: ")
 
-for it in lista_compras:
-    print(it)
+# for it in lista_compras:
+#     print(it)
+
+# -------------------------------
+
+# Listas são heterogeneas em Python, ou seja, pode misturar todo tipo de item:
+    # inteiros, strings, outras listas...
+
+lista_inteiros = [1,2,3]
+elementos = ["casa", 1, "banana", lista_inteiros]
+
+for item in elementos:
+    print(item, type(item))
