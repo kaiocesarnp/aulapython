@@ -48,7 +48,7 @@
 
 #-------------
 
-# FUNÇÕES DE LISTAS
+# -----------------------------FUNÇÕES DE LISTAS-------------------------
 
     # Indices e contagens
 
@@ -56,11 +56,23 @@
 # função 'index' mostra em qual indice da lista o elemento se encontra 
         # nessa chamada que será passada, o 'index' retornará o primeiro indice
 
-lista_compras = ["maças", "leite", "arroz", "frango", "leite", "trigo"]
+# lista_compras = ["maças", "leite", "arroz", "frango", "leite", "trigo"]
 
-qtde_vezes = lista_compras.count('leite')
-idx = lista_compras.index('leite')
+# qtde_vezes = lista_compras.count('leite')
+# idx = lista_compras.index('leite')
 
-print("Quantidade: ", qtde_vezes)
-print("Primeiro idx: ", idx)
+# print("Quantidade: ", qtde_vezes)
+# print("Primeiro idx: ", idx)
+
+# -------------------
+
+# Função 'sort' ordena a lista... como são todas strings, nesse caso será em ordem alfabetica
+
+lista_compras = ["maças", "leite", "arroz", "frango", "trigo"]
+
+lista_compras.sort()
+
+print("Lista")
+for item in lista_compras:
+    print(item)
 
