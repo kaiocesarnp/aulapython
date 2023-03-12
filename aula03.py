@@ -92,9 +92,23 @@
 # Função "remove(conteudo)" remove o PRIMEIRO elemento com o conteudo especificado
 # Função "pop()" remove o último elemento da lista
 
-lista_compras = ["maças", "leite", "arroz", "frango", "trigo"]
+# lista_compras = ["maças", "leite", "arroz", "arroz", "frango", "trigo"]
 
-lista_compras.remove("arroz")
-lista_compras.pop()
-for item in lista_compras:
-    print(item)
+# lista_compras.remove("arroz")
+# lista_compras.pop()
+# for item in lista_compras:
+#     print(item)
+
+# ------------------------------
+
+# Função "insert(idx, item)" insere o item na posição
+# Função "append(item)" insere o item no final da lista
+
+# lista_compras = ["maças", "leite", "arroz", "frango", "trigo"]
+
+# lista_compras.insert(2, "feijão")
+# lista_compras.append("tomate")
+
+# for item in lista_compras:
+#     print(item)
+
