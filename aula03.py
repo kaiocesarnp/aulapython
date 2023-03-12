@@ -131,8 +131,14 @@
 # Listas são heterogeneas em Python, ou seja, pode misturar todo tipo de item:
     # inteiros, strings, outras listas...
 
-lista_inteiros = [1,2,3]
-elementos = ["casa", 1, "banana", lista_inteiros]
+# lista_inteiros = [1,2,3]
+# elementos = ["casa", 1, "banana", lista_inteiros]
 
-for item in elementos:
-    print(item, type(item))
+# for item in elementos:
+#     print(item, type(item))
+
+# --------------------------------
+# Arrays
+# Em Python, arrays são homogeneos, ou seja, todos elementos precisam ser do mesmo tipo
+    # por exemplo, um array com string, só pode ter strings
+
