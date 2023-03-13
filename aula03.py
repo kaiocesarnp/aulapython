@@ -147,10 +147,25 @@
 # TUPLAS
 
 # Tuplas em Py são similares a listas, no entanto são imutáveis
-    # Depois de criada, você não pode fazer modificações
+    # Depois de criada, você não pode fazer modificações, como por exemplo excluir algum item
+    # Ao invés de colchetes [], em tuplas se usa parentese ()
 
-tupla_compras = ("maças", "leite", "arroz", "frango", "tigo")
-for item in tupla_compras:
-    print(item)
+# tupla_compras = ("maças", "leite", "arroz", "frango", "tigo")
+# for item in tupla_compras:
+#     print(item)
 
-print("O item 1 é", tupla_compras[1])
+# print("O item 1 é", tupla_compras[1])
+
+# --------------------
+
+# Outro exemplo
+    # 'getsizeof' essa função da biblioteca 'sys' lê o elemento e diz quantos bytes 
+        # ele está ocupando na memória
+
+import sys
+
+lista = ["maças", "leite", "arroz", "frango", "tigo"]
+tupla = ("maças", "leite", "arroz", "frango", "tigo")
+
+print("Tamanho na memória da lista:", sys.getsizeof(lista))
+print("Tamanho na memória da tupla:", sys.getsizeof(tupla))
