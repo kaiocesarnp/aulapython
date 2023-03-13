@@ -142,3 +142,15 @@
 # Em Python, arrays são homogeneos, ou seja, todos elementos precisam ser do mesmo tipo
     # por exemplo, um array com string, só pode ter strings
 
+# --------------------------------
+
+# TUPLAS
+
+# Tuplas em Py são similares a listas, no entanto são imutáveis
+    # Depois de criada, você não pode fazer modificações
+
+tupla_compras = ("maças", "leite", "arroz", "frango", "tigo")
+for item in tupla_compras:
+    print(item)
+
+print("O item 1 é", tupla_compras[1])
