@@ -184,8 +184,29 @@
 
 # Exemplo:
 
-def saudacao():
-    print("Olá, bem vindo.")
+# def saudacao():
+#     print("Olá, bem vindo.")
+#     print("Esse é o curso de Python")
+
+# saudacao() #chama a função, igual 'print'
+
+# -------------------
+
+# PARAMETROS
+# Uma função comumente possui parametros
+    # Passamos esses parametros para a função, indicando o que ela precisa fazer
+    # Separa-se por virgulas os parametros dentro da função
+
+def saudacao(nome, periodo):
+    if(periodo == 'm'):
+        print("Bom dia", nome + '.')
+    elif(periodo == 't'):
+        print("Boa tarde", nome + '.')
+    elif(periodo == 'n'):
+        print("Boa noite", nome + '.')
+    else:
+        print("Ops, período inválido")
+    
     print("Esse é o curso de Python")
 
-saudacao() #chama a função, igual 'print'
+saudacao("Paulo", 't')
