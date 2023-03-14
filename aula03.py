@@ -197,16 +197,58 @@
     # Passamos esses parametros para a função, indicando o que ela precisa fazer
     # Separa-se por virgulas os parametros dentro da função
 
-def saudacao(nome, periodo):
-    if(periodo == 'm'):
-        print("Bom dia", nome + '.')
-    elif(periodo == 't'):
-        print("Boa tarde", nome + '.')
-    elif(periodo == 'n'):
-        print("Boa noite", nome + '.')
-    else:
-        print("Ops, período inválido")
+# def saudacao(nome, periodo):
+#     if(periodo == 'm'):
+#         print("Bom dia", nome + '.')
+#     elif(periodo == 't'):
+#         print("Boa tarde", nome + '.')
+#     elif(periodo == 'n'):
+#         print("Boa noite", nome + '.')
+#     else:
+#         print("Ops, período inválido")
     
-    print("Esse é o curso de Python")
+#     print("Esse é o curso de Python")
 
-saudacao("Paulo", 't')
+# saudacao("Paulo", 't')
+
+# ---------------------
+
+# Valores default
+
+# Os parametros da função podem ter valores default(padrão)
+# Ao chamar a função, caso nao seja passado esse parametro, o interpretador vai
+    # assumir o parametro default
+# Para adicionar um valor padrão ao parametro, basta usar 'nome_par = valor_padrao'
+
+# def saudacao(nome = 'Joao', periodo = 'm'):
+#     if(periodo == 'm'):
+#         print("Bom dia", nome + '.') #Essa é a saudação padrao
+#     elif(periodo == 't'):
+#         print("Boa tarde", nome + '.')
+#     elif(periodo == 'n'):
+#         print("Boa noite", nome + '.')
+#     else:
+#         print("Ops, período inválido")
+    
+#     print("Esse é o curso de Python")
+
+# saudacao()
+
+# ---------------------------
+
+# FATORIAL
+
+# Criar sua própria função para calcular fatorial de determinado número
+# def fatorial(n):
+#     res = 1
+#     while(n > 1):
+#         res = res*n
+#         n = n -1
+#     print("O fatorial é", res)
+
+# valor = int(input("Digite um valor ou -1 para sair: "))
+# while(valor != -1):
+#     fatorial(valor)
+#     valor = int(input("Digite um valor ou -1 para sair: "))
+
+# ----------------------------
