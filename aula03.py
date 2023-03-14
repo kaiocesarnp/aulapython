@@ -264,17 +264,62 @@
 # Uma função retorna (termina) imediatamente ao encontrar um return'.
 # Formato: 'return valor_a_ser_retornado'
 
-def fatorial(n):
-    if (n < 0):
-        return -1 #retornando -1 para indicar um erro
-    res = 1
-    while(n > 1):
-        res = res*n
-        n = n -1
-    return res
+# def fatorial(n):
+#     if (n < 0):
+#         return -1 #retornando -1 para indicar um erro
+#     res = 1
+#     while(n > 1):
+#         res = res*n
+#         n = n -1
+#     return res
 
-valor = int(input("Digite um valor ou -1 para sair: "))
-while(valor != -1):
-    resultado = fatorial(valor)
-    print("Fatorial de", valor, "é", resultado)
-    valor = int(input("Digite um valor ou -1 para sair: "))
+# valor = int(input("Digite um valor ou -1 para sair: "))
+# while(valor != -1):
+#     resultado = fatorial(valor)
+#     print("Fatorial de", valor, "é", resultado)
+#     valor = int(input("Digite um valor ou -1 para sair: "))
+
+# --------------------
+
+# CÓPIAS E REFERÊNCIAS
+# Variáveis simples (e.g., ints e floats) e também strings são passadas por cópia
+# Isso significa que se a função alterar o parâmetro, a variável original não vai ser alterada
+
+# Variáveis simples 
+# def altera_simples(val_int, val_float, texto):
+#     val_int = val_int + 1
+#     val_float = val_float + 1
+#     texto = texto + " teste"
+#     print("Dentro da função: ", val_int, ",", val_float, ",", texto)
+
+# meu_int = 10
+# meu_float = 3.14
+# minha_str = "aula"
+# altera_simples(meu_int, meu_float, minha_str)
+# print("Originais: ", meu_int, ",", meu_float, ",", minha_str)
+
+# ---------------------
+
+# Objetos compostos, como listas e arrays, são passados por referência
+# Alterar o objeto na função também altera o original
+
+# Objetos compostos
+# def altera_lista(lista):
+#     lista[0] = 0
+#     lista[1] = 1
+
+# def imprime_lista(lista):
+#     for item in lista:
+#         print(item)
+
+# minha_lista = [3,4,5]
+
+# print("Antes de alterar")
+# imprime_lista(minha_lista)
+# altera_lista(minha_lista)
+
+# print("Depois de alterar")
+# imprime_lista(minha_lista)
+
+# ----------------------
+
