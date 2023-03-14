@@ -162,10 +162,30 @@
     # 'getsizeof' essa função da biblioteca 'sys' lê o elemento e diz quantos bytes 
         # ele está ocupando na memória
 
-import sys
+# import sys
 
-lista = ["maças", "leite", "arroz", "frango", "tigo"]
-tupla = ("maças", "leite", "arroz", "frango", "tigo")
+# lista = ["maças", "leite", "arroz", "frango", "tigo"]
+# tupla = ("maças", "leite", "arroz", "frango", "tigo")
 
-print("Tamanho na memória da lista:", sys.getsizeof(lista))
-print("Tamanho na memória da tupla:", sys.getsizeof(tupla))
+# print("Tamanho na memória da lista:", sys.getsizeof(lista))
+# print("Tamanho na memória da tupla:", sys.getsizeof(tupla))
+
+# ------------------------
+
+# FUNÇÕES
+
+# É possível criar suas próprias funções, com o comando 'def'
+
+# def nome_funcao(): #nome da função
+#     instrucao1   #instruções que definem o que a função faz
+#     instrucao2
+
+#     instrucaoN
+
+# Exemplo:
+
+def saudacao():
+    print("Olá, bem vindo.")
+    print("Esse é o curso de Python")
+
+saudacao() #chama a função, igual 'print'
