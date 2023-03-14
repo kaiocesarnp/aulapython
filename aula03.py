@@ -252,3 +252,29 @@
 #     valor = int(input("Digite um valor ou -1 para sair: "))
 
 # ----------------------------
+
+# Mais sobre FATORIAL
+# A função fatorial imprime o resultado
+# Isso (geralmente) é uma má prática. Idealmente, essa função deveria
+# retornar (devolver) o resultado da conta.
+# Quem chamou a função decide o que fazer com esse resultado.
+
+# RETURN
+# Para retornar um resultado, utilize a palavra chave 'return' dentro de uma função
+# Uma função retorna (termina) imediatamente ao encontrar um return'.
+# Formato: 'return valor_a_ser_retornado'
+
+def fatorial(n):
+    if (n < 0):
+        return -1 #retornando -1 para indicar um erro
+    res = 1
+    while(n > 1):
+        res = res*n
+        n = n -1
+    return res
+
+valor = int(input("Digite um valor ou -1 para sair: "))
+while(valor != -1):
+    resultado = fatorial(valor)
+    print("Fatorial de", valor, "é", resultado)
+    valor = int(input("Digite um valor ou -1 para sair: "))
