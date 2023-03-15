@@ -76,3 +76,22 @@
 # dic = {'guarda-roupa': 3, 'televisão': 2, 'cadeira': 4, 'mesa': 1}
 # dic.items()
 
+# --------------------
+
+# ORDENAÇÃO DE DICIONÁRIOS
+
+# Os elementos do dicionario em python são apresentados na ordem que são inseridos
+# dicio = {}
+
+# dicio [2] = "b"
+# dicio [1] = "a"
+# dicio [3] = "c"
+
+# print(dicio)
+
+#-----------------------
+# Com a função 'sorted' é possivel ordernar, desde que os itens sejam comparaveis
+dicio = {'quarto':3, 'sala':2, 'banheiro':5}
+dicio = (dict(sorted(dicio.items())))
+print(dicio)
+
