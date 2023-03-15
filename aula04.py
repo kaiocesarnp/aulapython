@@ -160,6 +160,6 @@
 
 # ---------
 # Tamanho de uma matriz
-matriz = [ [4, 5, 6], [7, 8, 9]]
-tamanho = len(matriz)
-print(tamanho)
+# matriz = [ [4, 5, 6], [7, 8, 9]]
+# tamanho = len(matriz)
+# print(tamanho)
