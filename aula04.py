@@ -109,5 +109,57 @@
 
 # -------------------------
 
+# MATRIZES
+# Enquanto um array é uma estrutura para armazenar dados de forma “linear”, uma matriz é um array bi-dimensional.
+# Um array bi-dimensional é um array dentro de outro array.
+# Todas as operações feitas em um array podem ser feitas usando listas…
 
+# matriz = [ [4, 5, 6], [7, 8, 9]]
+# print(matriz[1]) #acessar a lista
+# print(matriz[0][2]) #acesssar o elemento 
 
+# print(type(matriz))
+
+# ---------------------
+# MANIPULANDO MATRIZES
+
+# Inserindo elementos no final
+# matriz = [ [4, 5, 6], [7, 8, 9]]
+# matriz.append([10, 11, 12])
+# print(matriz)
+
+# ---------
+# Inserção posicional em matriz
+# matriz = [ [4, 5, 6], [7, 8, 9]]
+# matriz.insert(1, [12, 14, 15])
+# print(matriz)
+
+# ---------
+# Atualizando uma matriz (troca lista)
+# matriz = [ [4, 5, 6], [7, 8, 9]]
+# matriz[0] = [-4, 10, -7]
+# print(matriz)
+
+# -----------
+# Atualizando um elemento especifico (substitui dado)
+# matriz = [ [4, 5, 6], [7, 8, 9]]
+# matriz [0][2] = 164
+# print(matriz)
+
+# -----------
+# Removendo um linha (apaga uma lista)
+# matriz = [ [4, 5, 6], [7, 8, 9]]
+# del(matriz[1])
+# print(matriz)
+
+# ----------
+# Removendo um elemento especifico
+# matriz = [ [4, 5, 6], [7, 8, 9]]
+# del(matriz[0][1])
+# print(matriz)
+
+# ---------
+# Tamanho de uma matriz
+matriz = [ [4, 5, 6], [7, 8, 9]]
+tamanho = len(matriz)
+print(tamanho)
