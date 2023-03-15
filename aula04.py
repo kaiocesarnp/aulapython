@@ -190,10 +190,30 @@
 
 # --------------------------
 # Copia de uma matriz, sem modificar
+# import copy
+# m1 = [[1, 1], [2,2]]
+# m2 = copy.copy(m1)
+# m1[0] = [0,0]
+
+# print(m1)
+# print(m2)
+
+# --------
+# Outra forma
 import copy
 m1 = [[1, 1], [2,2]]
 m2 = copy.copy(m1)
-m1[0] = [0,0]
+m1[0][0] = 0
+
+print(m1)
+print(m2)
+
+# -----------
+# Outra forma, copia recursiva
+import copy
+m1 = [[1, 1], [2,2]]
+m2 = copy.deepcopy(m1)
+m1[0][0] = 0
 
 print(m1)
 print(m2)
