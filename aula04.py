@@ -200,20 +200,113 @@
 
 # --------
 # Outra forma
-import copy
-m1 = [[1, 1], [2,2]]
-m2 = copy.copy(m1)
-m1[0][0] = 0
+# import copy
+# m1 = [[1, 1], [2,2]]
+# m2 = copy.copy(m1)
+# m1[0][0] = 0
 
-print(m1)
-print(m2)
+# print(m1)
+# print(m2)
 
 # -----------
 # Outra forma, copia recursiva
-import copy
-m1 = [[1, 1], [2,2]]
-m2 = copy.deepcopy(m1)
-m1[0][0] = 0
+# import copy
+# m1 = [[1, 1], [2,2]]
+# m2 = copy.deepcopy(m1)
+# m1[0][0] = 0
 
-print(m1)
-print(m2)
+# print(m1)
+# print(m2)
+
+# -----------------------
+
+#QUESTÃO 01
+# O que imprime nos blocos de comando IF/ELSE abaixo? Cada bloco está separado por cores.
+
+# Considere as variáveis de entrada abaixo:
+# carro = 'honda'
+# cor = 'prata'
+
+# # Resposta 1
+# if not(carro == 'honda' or carro == 'toyota'):
+#     print('Correto')
+# else:
+#     print('Incorreto')
+# if(carro == 'honda' or carro == 'toyota'):
+#     print('Correto')
+# else:
+#     print('Incorreto')
+
+# # Resposta 2
+# if(carro == 'honda' and carro == 'toyota'):
+#     print('Correto')
+# else:
+#     print('Incorreto')
+
+# # Resposta 3
+# if(carro == 'honda'  or  carro == 'toyota') and (cor == 'prata'):
+#     print('Correto')
+# else:
+#     print('Incorreto')
+
+# # Resposta 4
+# if not(carro == 'honda' and carro == 'toyota'):
+#     print('Correto')
+# else:
+#     print('Incorreto')
+
+# ----------------------
+# QUESTÃO 02
+# Considere a sequencia de comandos à seguir:
+
+# if carro.lower() == 'civic':
+#     print('Acertou')
+#     print('Vamos andar de {}'.format(carro))
+
+# O que imprime? (Múltipla escolha)
+# Escolha uma ou mais:
+    #A
+# carro = 'corolla'
+# Imprime:
+# Acertou
+# Vamos andar de corolla
+
+    #B
+# carro = 'civic'
+# Imprime:
+# Acertou
+# Vamos andar de civic
+
+    #C
+# carro = 'civic'
+# Imprime somente:
+# Acertou
+
+    #D
+# carro = 'corolla'
+# Imprime somente:
+# Vamos andar de corolla
+
+# ---------------------
+# QUESTÃo 03
+# Considere a variável:
+# carro = 'civic'
+
+# # O que imprime as comparações abaixo?
+# carro.lower() == 'civic'
+# carro.upper() == 'civic'
+# carro.title() == 'civic'
+# carro.capitalize()  == 'civic'
+
+# print(carro)
+
+# ----------------
+# QUESTÃO 04
+# Considere a sequencia de comandos à seguir:
+
+# if carro.lower() == 'civic':
+#     print('Acertou')
+# print('Vamos andar de {}'.format(carro))
+
+# O que imprime? (Múltipla escolha
+
