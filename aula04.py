@@ -91,7 +91,23 @@
 
 #-----------------------
 # Com a função 'sorted' é possivel ordernar, desde que os itens sejam comparaveis
-dicio = {'quarto':3, 'sala':2, 'banheiro':5}
-dicio = (dict(sorted(dicio.items())))
-print(dicio)
+# dicio = {'quarto':3, 'sala':2, 'banheiro':5}
+# dicio = (dict(sorted(dicio.items())))
+# print(dicio)
+
+# -----------------------
+# Ordenar por valor
+    # Cria-se um novo dicionario vazio
+        # Utilizando 'key=dicio.get' no metodo 'sorted', os valores são usados para ordenar
+
+# dicio = {2: 'f', 1: 'x', 3: 'b'}
+# dic_ordenado = {}
+# chaves_ordenadas = sorted(dicio, key=dicio.get)
+
+# for i in chaves_ordenadas:
+#     dic_ordenado[i] = dicio[i]
+
+# -------------------------
+
+
 
