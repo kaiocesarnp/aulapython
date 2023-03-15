@@ -183,8 +183,17 @@
 
 # ----------
 # Outra forma
-matriz = [ [0,1,2], [3,4,5], [6,7,8], [9, 10, 11], [12, 13, 14], [15, 16, 17]]
+# matriz = [ [0,1,2], [3,4,5], [6,7,8], [9, 10, 11], [12, 13, 14], [15, 16, 17]]
 
-matriz2 = matriz[:2] # do inicio até uma posição definida, menor que 2 no caso
-print(matriz2)
+# matriz2 = matriz[:2] # do inicio até uma posição definida, menor que 2 no caso
+# print(matriz2)
 
+# --------------------------
+# Copia de uma matriz, sem modificar
+import copy
+m1 = [[1, 1], [2,2]]
+m2 = copy.copy(m1)
+m1[0] = [0,0]
+
+print(m1)
+print(m2)
