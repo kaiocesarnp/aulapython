@@ -310,3 +310,70 @@
 
 # O que imprime? (Múltipla escolha
 
+# --------------------
+# QUESTÃO 05
+# O que imprime a sequencia de IFs aninhados?
+
+# carro = 'honda'
+# cor = 'prata'
+
+# if(carro == 'honda'):
+#     print(carro.title())
+
+# if(cor != 'prata'):
+#     print('Outra cor')
+
+# else:
+#     print(cor.title())
+
+# else:
+#     print('Outro carro')
+
+# ------------------------
+# QUESTÃ) 06
+# Considere um programa que imprime os números de 1 a 6, exceto o 2 e 5, abaixo. 
+    # Qual a condição dentro laço?
+
+# for x in  range(6):
+#     # if(??????)
+#     if not (x ==2 or x==5): # resposta
+#         print(x,end='')
+# print("\n") 
+
+# -----------------------
+# QUESTÃO 07
+# Considere os comandos abaixo e assinale as alternativas corretas 
+    # (múltipla escolha):
+
+# if ((pessoa1 >= 18) or (pessoa2 >= 18)) and  ((papel1 == 'responsável') or (papel2 == 'responsável')) and not ((pessoa1 < 12) or (pessoa2 < 12)):
+#     print('Ambos assistem o filme no cinema...')
+
+# ----------------------
+# QUESTÃO 08
+# O que imprime a sequencia de condicionais?
+
+carro = 'civic'
+
+if(carro.lower() == 'civic'):
+    print('Acertou')
+
+else:
+    print('Errou')
+
+if(carro.upper() == 'civic'):
+    print('Acertou')
+
+else:
+    print('Errou')
+
+if(carro.title() == 'civic'):
+    print('Acertou')
+
+else:
+    print('Errou')
+
+if(carro.capitalize() == 'civic'):
+    print('Acertou')
+
+else:
+    print('Errou')
