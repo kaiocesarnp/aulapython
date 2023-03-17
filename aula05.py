@@ -57,7 +57,31 @@
 # Maiúsculo usando: upper()
 # Primeira maiúscula e demais minúsculas: capitalize()
 
-frase1 = "CURSO de Python"
-print(frase1.upper())
-print(frase1.lower())
-print(frase1.capitalize())
+# frase1 = "CURSO de Python"
+# print(frase1.upper())
+# print(frase1.lower())
+# print(frase1.capitalize())
+
+# ------------
+# Split
+# Utilize split(string_de_quebra) para “quebrar” uma string em uma lista de strings
+
+# frase = "Esse é o curso de Python - Foco em iniciantes"
+# # lista1 = frase.split(" ") #itens separados por espaços
+# # for item in lista1:
+# #     print(item)
+
+# lista2 = frase.split("-") #itens separados por traço
+# for item in lista2:
+#     print(item)
+
+# ------------
+# Índice
+# Para encontrar o índice de uma palavra ou caractere, use a função find()
+
+# frase = "Olá mundo teste isso vai ficar teste final"
+# inicio = frase.find("teste") + len("teste") #len tira o item final
+# fim = frase.find("teste", inicio)
+# fim = frase.find("teste", inicio+1) # +1 significa a partir do primeiro que foi encontrado, sem o "+ len("teste")" 
+# print(frase[inicio:fim])
+
