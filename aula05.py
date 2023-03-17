@@ -85,3 +85,17 @@
 # fim = frase.find("teste", inicio+1) # +1 significa a partir do primeiro que foi encontrado, sem o "+ len("teste")" 
 # print(frase[inicio:fim])
 
+# ---------------
+# Lista de Funções
+# Essas são apenas algumas das funções. 
+# Veja uma lista mais completa em: www.w3schools.com/python/python_ref_string.asp 16
+# count() Quantas vezes a palavra aparece
+# endswith() Verifica se a string termina com determinada palavra
+# startswith() Verifica se a string começa com determinada palavra
+# islower() Verifica se todos caracteres estão em caixa baixa
+# isnumeric() Verifica se todos caracteres são numéricos
+# isspace() Verifica se todos os caracteres são espaços em branco
+# strip() Remove caracteres em branco do começo da string
+# isascii() Verifica se todos os caracteres são ASCII
+
+# ----------------------------------------------------
