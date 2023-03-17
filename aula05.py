@@ -26,7 +26,38 @@
 # A  função retorna uma nova string alterada
     # A string original não é alterada
 
-frase = "Esse é o curso de linguagem C++. Você pode criar programas em C++."
-mudanca = frase.replace("C++", "Python")
-print(frase)
-print(mudanca)
+# frase = "Esse é o curso de linguagem C++. Você pode criar programas em C++."
+# mudanca = frase.replace("C++", "Python", 1) # este numero signica o numero max de substituições
+# print(frase)
+# print(mudanca)
+
+# ------------
+# Concatenar
+# É possível concatenar strings utilizando o operador +
+
+# nome_curso = "Python"
+# ola = "Bom dia."
+# frase = ola + " Esse é o curso de " + nome_curso + "."
+# print(frase)
+
+# ------------
+# Caracteres de controle
+# Caracteres de controle “fazem algo”, sem necessariamente imprimir algo na tela
+    # Em Python, um caractere de controle começa com uma barra invertida \
+        # Exemplos:
+        # "\n" insere uma quebra de linha
+        # "\t" insere uma tabulação
+# frase = "Esse é um texto\nde\t exemplo"
+# print(frase)
+
+# -------------
+# Caixa
+# É possível transformar a caixa dos caracteres de uma string para:
+# Minúsculo usando: lower()
+# Maiúsculo usando: upper()
+# Primeira maiúscula e demais minúsculas: capitalize()
+
+frase1 = "CURSO de Python"
+print(frase1.upper())
+print(frase1.lower())
+print(frase1.capitalize())
