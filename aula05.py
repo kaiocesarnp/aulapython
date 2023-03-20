@@ -247,24 +247,45 @@
 # Marcos Santos;35;8000 - Utilizando ';' como separador para não confundir com a vírgula dos salários
 # Ex:
 
-arq = open("c:/users/particular/desktop/parapyt3.csv", "r")
-arq.readline()#descartando primeira linha
+# arq = open("c:/users/particular/desktop/parapyt3.csv", "r")
+# arq.readline()#descartando primeira linha
 
-idades = 0
-salarios = 0
-qtde = 0
+# idades = 0
+# salarios = 0
+# qtde = 0
 
-for linha in arq:
- quebra = linha.split(';')
- idades = idades + int(quebra[1])
- salarios = salarios + float(quebra[2].replace(',','.')) #substitui a virg por ponto e em 'float'
- qtde = qtde + 1
-arq.close()
+# for linha in arq:
+#  quebra = linha.split(';')
+#  idades = idades + int(quebra[1])
+#  salarios = salarios + float(quebra[2].replace(',','.')) #substitui a virg por ponto e em 'float'
+#  qtde = qtde + 1
+# arq.close()
  
-print("A idade media é", idades/qtde)
-print("O salário médio é", salarios/qtde)
+# print("A idade media é", idades/qtde)
+# print("O salário médio é", salarios/qtde)
 
+# --------------
+# Biblioteca padrão para CSVs
+# O Python conta com uma biblioteca padrão para leitura de CSVs
 
+# import csv
 
+# arq = open("c:/users/particular/desktop/parapyt3.csv", "r")
+# csv_reader = csv.reader(arq, delimiter = ';') #cria um leitor de csv baseado no arquivo abeto acima, com o delimitador ponto e virgula ';'
 
+# next(csv_reader)#pular a primeira linha, no caso o cabeçalho
 
+# idades = 0
+# salarios = 0
+# qtde = 0
+# for linha in csv_reader: #com a criação do leito de csv, essa linha deixa de ser uma string e vira automaticamente uma lista, sem a necessidade do 'split(;)'
+#  idades = idades + int(linha[1])
+#  salarios = salarios + float(linha[2].replace(',','.'))
+#  qtde = qtde + 1
+# arq.close()
+
+# print("A idade media é", idades/qtde)
+# print("O salário médio é", salarios/qtde)
+
+# ----------------------------------------
+# EXERCÍCIOS
