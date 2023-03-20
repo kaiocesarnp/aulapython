@@ -130,9 +130,22 @@
 # -----------
 # outra forma
 
+# anterior = 5000
+# atual = 5500
+# diferenca = atual - anterior
+# pct = diferenca/anterior * 100
+
+# print("A diferença de salário é de R${}, ou seja, {}%".format(diferenca, pct))
+
+# ---------------
+# O format infere automaticamente o tipo da variável. Mas é possível forçar um tipo específico
+#  Exemplo: use {:f} para imprimir como um float
+
 anterior = 5000
 atual = 5500
 diferenca = atual - anterior
 pct = diferenca/anterior * 100
 
-print("A diferença de salário é de R${}, ou seja, {}%".format(diferenca, pct))
+print("A diferença de salário é de R${:f}, ou seja, {:.2f}%".format(diferenca, pct)) # '.2f' limita o número de casas decimais
+
+# -------------
