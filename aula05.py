@@ -141,11 +141,45 @@
 # O format infere automaticamente o tipo da variável. Mas é possível forçar um tipo específico
 #  Exemplo: use {:f} para imprimir como um float
 
-anterior = 5000
-atual = 5500
-diferenca = atual - anterior
-pct = diferenca/anterior * 100
+# anterior = 5000
+# atual = 5500
+# diferenca = atual - anterior
+# pct = diferenca/anterior * 100
 
-print("A diferença de salário é de R${:f}, ou seja, {:.2f}%".format(diferenca, pct)) # '.2f' limita o número de casas decimais
+# print("A diferença de salário é de R${:f}, ou seja, {:.2f}%".format(diferenca, pct)) # '.2f' limita o número de casas decimais
 
 # -------------
+# Arquivos e Leitura
+# Para abrir um arquivo texto em modo leitura, use a função
+# arq = open(nomeArquivo, "r")
+# arq é uma variável que vai representar o arquivo aberto
+# "r" de read indica que o arquivo vai ser de leitura
+# É obrigatório que o arquivo seja fechado depois de usando arq.close()
+
+# Exemplo:
+# arq = open("documento.txt", "r")
+# #Faz algo com o arquivo
+# arq.close()
+
+# ----------
+# Função read()
+# A função read() lê todo o conteúdo do arquivo
+# arq = open("c:/users/particular/desktop/parapyt.txt", "r")
+# conteudo = arq.read()
+# print(conteudo)
+# arq.close()
+
+# -----------
+# Readline
+# Para ler uma única linha do arquivo, utilize readline()
+    # A função retorna a próxima linha do arquivo, ou uma string vazia se o arquivo terminou
+
+# arq = open("c:/users/particular/desktop/parapyt.txt", "r")
+# conteudo = arq.readline()
+# while(conteudo != ""):
+#     print("Linha lida:", conteudo)
+#     conteudo = arq.readline()
+# arq.close()
+
+# ---------------
+
