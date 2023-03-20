@@ -214,22 +214,57 @@
 # write() só aceita strings. Converta para string usando, por exemplo
     #str() o conteúdo a ser escrito quando necessário
 
-valor = 10
-pi = 3.14
-nome = "Maria da Silva"
+# valor = 10
+# pi = 3.14
+# nome = "Maria da Silva"
 
-arq = open ("c:/users/particular/desktop/parapyt2.txt", "a")
+# arq = open ("c:/users/particular/desktop/parapyt2.txt", "a")
 
-arq.write(str(valor))
-arq.write(';')
-arq.write(str(pi))
-arq.write(';')
-arq.write('\n')
-arq.write(nome)
-arq.write('\n')
-arq.close()
+# arq.write(str(valor))
+# arq.write(';')
+# arq.write(str(pi))
+# arq.write(';')
+# arq.write('\n')
+# arq.write(nome)
+# arq.write('\n')
+# arq.close()
 
 # ---------------
+# Arquivos Delimitados
+
+# Você pode criar seu próprio padrão de arquivos
+# Mas em sistemas simples é comum a utilização de padrões já
+    # conhecidos e aceitos, como csv, xml, Json, …
+
+# CSV - comma-separated values
+# Tipo de arquivo de texto delimitado
+# Os valores são separados por vírgula
+    # Muitas vezes usamos outros separadores, como ';'
+# Ex:
+# Nome;Idade;Salário  - Um cabeçalho para ajudar a identificar as colunas
+# Maria Silva;45;8500,85
+# José Oliveira;30;5500,4
+# Marcos Santos;35;8000 - Utilizando ';' como separador para não confundir com a vírgula dos salários
+# Ex:
+
+arq = open("c:/users/particular/desktop/parapyt3.csv", "r")
+arq.readline()#descartando primeira linha
+
+idades = 0
+salarios = 0
+qtde = 0
+
+for linha in arq:
+ quebra = linha.split(';')
+ idades = idades + int(quebra[1])
+ salarios = salarios + float(quebra[2].replace(',','.')) #substitui a virg por ponto e em 'float'
+ qtde = qtde + 1
+arq.close()
+ 
+print("A idade media é", idades/qtde)
+print("O salário médio é", salarios/qtde)
+
+
 
 
 
