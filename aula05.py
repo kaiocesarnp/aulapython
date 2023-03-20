@@ -191,12 +191,43 @@
 # arq.close()
 
 # ------------
-arq = open("c:/users/particular/desktop/parapyt.txt", "r") #lê o arquivo
-for linha in arq:           #pega o arquivo linha à linha 
-    quebra = linha.split(" ")
-    nome = quebra[0]        #nome da pessoa é o indice 0 
-    idade = int(quebra[1])  #idade é o indice 1, o 'int' transforma a string em inteiro
+# arq = open("c:/users/particular/desktop/parapyt.txt", "r") #lê o arquivo
+# for linha in arq:           #pega o arquivo linha à linha 
+#     quebra = linha.split(" ")
+#     nome = quebra[0]        #nome da pessoa é o indice 0 
+#     idade = int(quebra[1])  #idade é o indice 1, o 'int' transforma a string em inteiro
 
-    print(nome, "tem", idade, "anos de idade")
+#     print(nome, "tem", idade, "anos de idade")
+# arq.close()
+
+# ----------------
+# Modo Escrita
+# Para abrir um arquivo texto em modo escrita, existem dois modos básicos
+# Modo escrita (write). Se o arquivo já existir, será substituído
+# f = open(nomeArquivo, "w")
+# Modo anexagem (append). O conteúdo é anexado no final do arquivo, caso o arquivo já exista
+# f = open(nomeArquivo, "a")
+
+# Para escrever no arquivo, use a função write()
+# Dicas:
+# write() não adiciona uma quebra de linha automaticamente no texto, utilize entao '\n'
+# write() só aceita strings. Converta para string usando, por exemplo
+    #str() o conteúdo a ser escrito quando necessário
+
+valor = 10
+pi = 3.14
+nome = "Maria da Silva"
+arq = open ("c:/users/particular/desktop/parapyt2.txt", "a")
+arq.write(str(valor))
+arq.write(';')
+arq.write(str(pi))
+arq.write(';')
+arq.write('\n')
+arq.write(nome)
+arq.write('\n')
 arq.close()
+
+# ---------------
+
+
 
