@@ -217,7 +217,9 @@
 valor = 10
 pi = 3.14
 nome = "Maria da Silva"
+
 arq = open ("c:/users/particular/desktop/parapyt2.txt", "a")
+
 arq.write(str(valor))
 arq.write(';')
 arq.write(str(pi))
