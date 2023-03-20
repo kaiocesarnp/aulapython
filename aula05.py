@@ -289,3 +289,104 @@
 
 # ----------------------------------------
 # EXERCÍCIOS
+# Questão 01
+# Considere o seguinte programa em Python e indique qual será o conteúdo do arquivo documento.txt ao final da execução do programa.
+
+# arq = open("c:/users/particular/desktop/documento.txt", "a")
+# arq.write("Olá mundo\n")
+# arq.write("Cruel\n")
+# arq.close()
+
+# arq = open("documento.txt", "w")
+# arq.write("Esse é um doc de texto")
+# arq.close()
+
+# Escolha uma opção:
+# a. Não é possível saber o conteúdo exato do arquivo. O resultado depende do conteúdo anterior do arquivo.
+# b. Olá mundo           
+# Cruel
+# c. Esse é um documento de texto   Resposta
+# d. O programa resulta em um erro de execução e o arquivo não é escrito.
+
+# ------------------
+# Questão 02
+# Ao executar os comandos a seguir, o que será impresso na tela?
+
+# frase1 = "laranja laranja"
+# frase2 = frase1.replace("laranja", "banana", 1)
+# frase3 = frase1 [0:3] + " " + frase1 + " " + frase2
+
+# print(frase3)
+ 
+# Escolha uma opção:
+# a. ban banana banana banana banana
+# b. ban banana laranja banana laranja
+# c. ban banana laranja banana laranja
+# d. lar laranja laranja banana laranja     Resposta
+# e. lara laranja laranja banana laranja
+
+# ----------------------
+# Questão 03
+# Considere que matrizes estão sendo armazenadas em arquivos .csv, onde o separador é a vírgula.
+# Cada linha do arquivo representa uma linha da matriz, e as matrizes são sempre quadradas (a quantidade de linhas é a mesma da de colunas).
+# A seguir é dado um exemplo de conteúdo de um arquivo csv contendo uma matriz de 4x4:
+
+# 1,2,3,4
+# 5,6,7,8
+# 9,10,11,12
+# 13,14,15,16
+
+# Baseado nisso, responda o que o programa a seguir faz:
+
+# import csv 
+
+# arq = open("c:/users/particular/desktop/matriz.csv", "r")
+# csv_reader = csv.reader(arq, delimiter = ',')
+# i = 0
+# for linha in csv_reader:
+#     print(linha[i])
+#     i = i + 1
+# arq.close()
+
+# Escolha uma opção:
+# a. Imprime linha sim, linha não (de forma intercalada) da matriz.
+# b. Imprime os valores da diagonal principal da matriz no arquivo.  Resposta
+# c. Imprime o primeiro valor de cada linha da matriz no arquivo.
+# d. Imprime cada uma das linhas da matriz no arquivo.
+# e. Imprime a soma das linhas das matriz no arquivo.
+
+# --------------------
+# Questão 04
+# Considere um arquivo chamado exemplo.csv que possui o seguinte conteúdo:
+
+# Nome;Idade;Salário
+# Maria Silva;45;8500,85
+# José Oliveira;30;5500,4
+# Marcos Santos;35;8000
+
+
+# Ao executar o programa a seguir, o que é impresso na tela?
+# import csv
+
+# arq = open("c:/users/particular/desktop/exemplo.csv", "r")
+# csv_reader = csv.reader(arq, delimiter= ';')
+# for linha in csv_reader:
+#     print(linha[1])
+#     next(csv_reader)
+# arq.close()
+
+# Escolha uma opção:
+# a. 45
+# 30
+# 35
+# b. Nome
+# Maria Silva
+# José Oliveira
+# Marcos Santos
+# c. Idade
+# 30     Resposta
+# d. 30
+# e. Idade
+# 45
+# 30
+# 35
