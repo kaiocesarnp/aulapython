@@ -99,3 +99,30 @@
 # isascii() Verifica se todos os caracteres são ASCII
 
 # ----------------------------------------------------
+
+# Formatando Strings
+# Existem várias formas para formatar uma string
+# Uma delas é usar a função format()
+# A forma mais simples de usar o format, é colocando {} na string.
+# As chaves servem como placeholders, e serão substituídas pelo format()
+# A função format() retorna uma nova string como conteúdo substituído
+# Exemplo:
+
+# anterior = 5000
+# atual = 5500
+# diferenca = atual - anterior
+# pct = diferenca/anterior * 100
+# frase = "A diferença de salário é de R${}, ou seja, {}%"
+# formatado = frase.format(diferenca, pct)
+# print(formatado)
+
+# ----------
+# É possível formatar diretamente no print. Veja um exemplo:
+
+anterior = 5000
+atual = 5500
+diferenca = atual - anterior
+pct = diferenca/anterior * 100
+
+formatado = "A diferença de salário é de R${}, ou seja, {}%".format(diferenca, pct)
+print(formatado)
