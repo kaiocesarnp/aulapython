@@ -182,4 +182,21 @@
 # arq.close()
 
 # ---------------
+# Iterando
+# É possível iterar linha a linha em um arquivo
+    # Mas cuidado: um arquivo não é uma lista
+# arq = open("c:/users/particular/desktop/parapyt.txt", "r")
+# for linha in arq: #o 'readline' está implicito aqui, sendo executado da mesma forma
+#     print("Linha lida:", linha)
+# arq.close()
+
+# ------------
+arq = open("c:/users/particular/desktop/parapyt.txt", "r") #lê o arquivo
+for linha in arq:           #pega o arquivo linha à linha 
+    quebra = linha.split(" ")
+    nome = quebra[0]        #nome da pessoa é o indice 0 
+    idade = int(quebra[1])  #idade é o indice 1, o 'int' transforma a string em inteiro
+
+    print(nome, "tem", idade, "anos de idade")
+arq.close()
 
