@@ -119,10 +119,20 @@
 # ----------
 # É possível formatar diretamente no print. Veja um exemplo:
 
+# anterior = 5000
+# atual = 5500
+# diferenca = atual - anterior
+# pct = diferenca/anterior * 100
+
+# formatado = "A diferença de salário é de R${}, ou seja, {}%".format(diferenca, pct)
+# print(formatado)
+
+# -----------
+# outra forma
+
 anterior = 5000
 atual = 5500
 diferenca = atual - anterior
 pct = diferenca/anterior * 100
 
-formatado = "A diferença de salário é de R${}, ou seja, {}%".format(diferenca, pct)
-print(formatado)
+print("A diferença de salário é de R${}, ou seja, {}%".format(diferenca, pct))
