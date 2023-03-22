@@ -193,4 +193,31 @@
 # print(alterado)
 
 # -------------------
+# Deduzir dimensões
+# A função reshape aceita que seja atribuído -1 a uma das dimensões.
+# Nesse caso, a própria função vai inferir automaticamente o valor dessa dimensão
 
+import numpy as np
+
+dados = np.linspace(2, 32, 16, dtype=np.intc)
+alterado = dados.reshape((-1,4)) #ele deduz automaticamente o numero de colunas ou se quiser, elementos
+
+print(alterado.shape)
+print(alterado)
+
+# -----------------------
+# Cuidado
+# A função reshape retorna uma variável que contém uma nova visão, mas que compartilha os dados
+# Modifica os dados de uma visão, automaticamente todas as visões que usam esses dados
+
+# import numpy as np
+
+# dados = np.linspace(2, 32, 16, dtype=np.intc)
+# alterado = dados.reshape((-1,2))
+# dados[0] = -5
+
+# print(dados)
+# print(alterado)
+
+# -------------------
+# 
