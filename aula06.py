@@ -322,3 +322,9 @@
 # Por exemplo, se você deseja adicionar um header, utilize o parâmetro de mesmo nome
 # Dica: Os headers e footers são inseridos por padrão como comentários
 # Para alterar isso, coloque comments=""
+
+import numpy as np
+dados = np.ones((3,4), dtype=np.intc) #criada a matriz de 3 por 4 com elementos 1 
+header = "Coluna0;Coluna1;Coluna2;Coluna3" #criado o header
+np.savetxt("c:/users/particular/desktop/aula06.csv", dados, delimiter=";", fmt="%d", header=header, comments="") #não os coloque como comentários
+
