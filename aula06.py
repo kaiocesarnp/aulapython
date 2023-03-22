@@ -85,6 +85,34 @@
 # é possivel especificar o valor que será colocado dentro da matriz
     #neste exemplo, o valor é o numero 6, transformado em inteiro através de 'intc'
 
-import numpy as np
-matriz_seis = np.full((5,5), 6, dtype=np.intc)
-print(matriz_seis)
+# import numpy as np
+# matriz_seis = np.full((5,5), 6, dtype=np.intc)
+# print(matriz_seis)
+
+# --------------
+# Empty
+# A função empty(shape, dtype=float) criar um array de dimensões
+    # shape sem inicializar os valores, ou seja, é sua responsabilidade carregar os valores lá dentro
+# Não é possível saber os valores atribuídos a cada posição do vetor
+# Lixo de memória
+# Custa mais barato chamar empty do que zero ou ones, por exemplo
+# Útil quando precisamos criar um array que vamos preencher posteriormente
+
+# --------------
+# Arange
+# A função arange(start, stop, step) retorna um vetor gerado no intervalo [start, stop)
+# Inicia em start e termina em stop (sem incluir o stop)
+# Cada valor entre start e stop tem uma distância step
+
+# import numpy as np
+# vetor1 = np.arange(10, 20, 2) #elementos do 10 até o 20, sem chegar no 20, pulando de 2 em 2
+# print(vetor1)
+
+# ---------------
+# Linspace
+# linspace(start, stop, num) retorna um vetor gerado no intervalo [start, stop]
+# O vetor vai possuir num valores igualmente espaçados
+
+# import numpy as np
+# vetor2 = np.linspace(10, 20, 5) #elementos do 10 até o 20, com 5 elementos precisamente espaçados
+# print(vetor2)
