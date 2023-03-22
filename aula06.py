@@ -153,3 +153,44 @@
 
 # poisson = np.random.poisson(lam=5.0, size=(2,2)) #valor de lambda e o tamanho do vetor
 # print(poisson)
+
+# -------------------
+# Alterando os Arrays
+# Como em listas, é possível acessar e modificar os itens diretamente através do operador []
+# É possível também modificar todos os elementos do array (ou de uma única linha de uma matriz por exemplo) combinando 
+    # o operador [] com os operadores:
+# += X some o valor atual do elemento com X
+# -= X decremente o valor atual do elemento com X
+# *= X multiplique o valor atual do elemento com X
+# /= X divida o valor atual do elemento com X
+
+# import numpy as np
+
+# matriz = np.ones((4,4), dtype=int) #vetor de 4 por 4 com numeros 1
+# matriz[0][0] = 33 #trocar o elemento 0 da linha 0 por 33
+# matriz += 14 #somar 14 com cada um dos elementos 
+# matriz[1] *= 2 #linha 1 multiplacada por 2
+
+# print(matriz)
+
+# -----------------
+# Reshape
+# reshape
+# É possível modificar as dimensões de um determinado array chamando reshape(newshape)
+# A função vai retornar uma variável contendo uma visão com as dimensões rearranjadas
+# As dimensões são uma tupla passada para newshape
+
+# Exemplo
+
+# import numpy as np
+
+# dados = np.linspace(2, 32, 16, dtype=np.intc) #do 2 ao 32 com 16 elementos
+# print(dados.shape) #mostra o formato dele, unico vetor com 16 colunas
+# print(dados)
+
+# alterado = dados.reshape((8,2)) #transforma em 8 linhas com cada linha contendo 2 colunas
+# print(alterado.shape)
+# print(alterado)
+
+# -------------------
+
