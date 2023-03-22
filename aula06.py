@@ -328,3 +328,6 @@ dados = np.ones((3,4), dtype=np.intc) #criada a matriz de 3 por 4 com elementos 
 header = "Coluna0;Coluna1;Coluna2;Coluna3" #criado o header
 np.savetxt("c:/users/particular/desktop/aula06.csv", dados, delimiter=";", fmt="%d", header=header, comments="") #não os coloque como comentários
 
+#--------------------------------------
+# EXERCÍCIOS
+# Questão 01
