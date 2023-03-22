@@ -116,3 +116,40 @@
 # import numpy as np
 # vetor2 = np.linspace(10, 20, 5) #elementos do 10 até o 20, com 5 elementos precisamente espaçados
 # print(vetor2)
+
+# -------------
+# Aleatorio
+# É possível preencher um array com valores aleatórios chamando
+    # np.random.rand(d0, d1, ..., dn) '.rand' é a função
+# d0, d1, … especifica o tamanho das dimensões do array
+# Os números são gerados a partir de uma distribuição uniforme
+# Os números gerados estarão no intervalo [0, 1)
+
+# import numpy as np
+
+# matrizRand = np.random.rand(2, 3)
+# print(matrizRand)
+
+# vetRand = np.random.rand(5)
+# print(vetRand)
+
+# -------------------
+# Aleatório com inteiros
+# random.randint(low, high=None, size=None) é similar a rand, mas preenche o array com valores inteiros
+
+# import numpy as np
+
+# dados = np.random.randint(0,100,(5,6)) #entre 0 e 100, com 5 linhas e 6 elementos
+# print(dados)
+
+# -------------------
+# Outras distribuições
+# Existem funções prontas para outras distribuições, como
+    # Poisson: np.random.poisson(lam=1.0, size=None)
+# lam é o valor de lambda
+# size é uma tupla indicando as dimensões do Array
+
+# import numpy as np
+
+# poisson = np.random.poisson(lam=5.0, size=(2,2)) #valor de lambda e o tamanho do vetor
+# print(poisson)
