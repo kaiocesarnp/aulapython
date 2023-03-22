@@ -282,3 +282,43 @@
 # print(np.cumsum(dados))
 
 # ----------------
+# Leitura de CSVs
+# Existem várias formas para se carregar o CSV para o NumPy
+
+# genfromtxt
+# O NumPy possui a função np.genfromtxt(caminhoArquivo,
+    # delimiter= delim, skip_header = skip, usecols = cols, dtype=tipos)
+# Faz a carga automática de dados do csv
+# delim: delimitador usado no arquivo
+# skip: número de linhas de header a serem ignoradas
+# cols: tupla com as colunas que devem ser carregadas
+# tipos: tupla com os tipos das colunas
+
+# import numpy as np
+# data = np.genfromtxt('c:/users/particular/desktop/aula06.csv', delimiter=';', #caminho pro arquivo e delimitador ponto e virgula
+# skip_header = 1, usecols = (13,24), dtype=(np.intc, np.intc)) #'skip_header = 1' pular a primeira pois é a do cabeçalho / 'usecols = (13,24)' = carregar colunas 13 e 24 / 'dtype=(np.intc, np.intc)' = determina que as duas colunas só terão numeros inteiros
+# print(data.shape)
+# print(data.sum(0)) #fazer o somatório dos elementos coluna à coluna
+
+# ------------
+# Salvando
+# Para salvar um ndarray em um CSV, uma possibilidade é o uso da 
+    # função np.savetxt(nomeArquivo, array, fmt= specf, delimiter=delim) 
+    # specf: especificador de formato dos dados.
+# Por padrão é float
+# Especificadores similares a linguagem C
+# numpy.org/devdocs/reference/generated/numpy.savetxt.html
+# delimitador: delimitador do CSV
+
+# import numpy as np
+
+# dados = np.ones((3,4), dtype=np.intc)
+# np.savetxt("c:/users/particular/desktop/aula06.csv", dados, delimiter=";", fmt="%d") #'%d' salva tudo como inteiro
+
+
+# --------------
+# Parâmetros
+# Tanto genfromtxt quanto savetxt possuem diversos parâmetros extras que podem te ajudar em tarefas específicas.
+# Por exemplo, se você deseja adicionar um header, utilize o parâmetro de mesmo nome
+# Dica: Os headers e footers são inseridos por padrão como comentários
+# Para alterar isso, coloque comments=""
