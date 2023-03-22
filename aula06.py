@@ -7,3 +7,7 @@
 # Funções para carga e descarga de dados de/para o disco
 # Funções de álgebra, geração de números aleatórios, transformadas
 
+# Depois de instalar o NumPy, basta importar
+# Dica: instale via pip, veja o tutorial
+
+import numpy as np
