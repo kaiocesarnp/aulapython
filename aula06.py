@@ -197,13 +197,13 @@
 # A função reshape aceita que seja atribuído -1 a uma das dimensões.
 # Nesse caso, a própria função vai inferir automaticamente o valor dessa dimensão
 
-import numpy as np
+# import numpy as np
 
-dados = np.linspace(2, 32, 16, dtype=np.intc)
-alterado = dados.reshape((-1,4)) #ele deduz automaticamente o numero de colunas ou se quiser, elementos
+# dados = np.linspace(2, 32, 16, dtype=np.intc)
+# alterado = dados.reshape((-1,4)) #ele deduz automaticamente o numero de colunas ou se quiser, elementos
 
-print(alterado.shape)
-print(alterado)
+# print(alterado.shape)
+# print(alterado)
 
 # -----------------------
 # Cuidado
@@ -220,4 +220,57 @@ print(alterado)
 # print(alterado)
 
 # -------------------
+# Funções matemáticas
+# Existem diversas funções matemáticas prontas para operar em arrays NumPy
+# Veja uma lista aqui
+# numpy.org/doc/stable/reference/routines.math.html
+
+#Alguns exemplos
+
+# sum
+# A função sum() retorna a soma dos elementos em um array
+
+# import numpy as np
+# dados = np.ones((4,3))
+# print(dados)
+
+# soma = dados.sum()
+# print(soma)
+
+# --------------------
+# Outro exemplo da sum
+# Opcionalmente, pode-se definir a dimensão na qual a soma será feita sum(dim)
+    # pela dimensão
+
+# import numpy as np
+# dados = np.ones((4,3)) 
+# soma = dados.sum(0) #diagonal, '4'. 3 colunas
+# print(soma)
+# soma = dados.sum(1) #horizontal, '3' . 4 linhas
+# print(soma) 
+
+# -----------------
+# outro exemplo da sum
+# É possível também executar a soma para uma linha específica
+# Exemplo:
+
+# import numpy as np
+# dados = np.ones((4,3))
+# linha0 = dados[0].sum() #somatório da linha 0
+# print(linha0) 
+
+# ------------------
+# diff
+# np.diff(array) faz o cálculo array[n] - array[n-1], ou
+    # seja, faz o cálculo da diferença entre os elementos com lag=1
+# É possível especificar outros lags
+
+# import numpy as np
+
+# dados = np.random.randint(0,10,(5,6))
+
+# print(dados)
+# print(np.diff(dados))
+
+# ----------------
 # 
