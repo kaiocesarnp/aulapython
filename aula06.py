@@ -273,4 +273,12 @@
 # print(np.diff(dados))
 
 # ----------------
-# 
+# cumsum
+# np.cumsum(array) faz a soma cumulativa dos elementos do array
+
+# import numpy as np
+# dados = np.ones((3,3))
+# print(dados)
+# print(np.cumsum(dados))
+
+# ----------------
