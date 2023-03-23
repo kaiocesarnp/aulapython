@@ -184,7 +184,117 @@
 # plt.show()
 
 # -----------------
-# 
+# Dados
+# Considere os arquivos PETR3.SA.csv e PRIO3.SA.csv que contém 
+    # os valores das ações da Petrobras e PetroRio entre os dias 04/01/2021 e 15/03/2022
+# Os dados foram retirados de finance.yahoo.com
+# Vamos considerar o preço de fechamento das ações
+
+# import matplotlib.pyplot as plt
+# from datetime import datetime #para lidar com datas
+# import numpy as np
+
+# dataPetr = np.genfromtxt('c:/users/particular/desktop/PETR3.SA.csv', delimiter=',', skip_header = 1, usecols = (0,5),  #carrega a coluna 0 e a 5
+# converters={0: lambda x: datetime.strptime(x.decode('ascii'), "%Y-%m-%d")}) #pra coluna zero, usa o conversor que diz que pra cada item que receber, transforma-o para uma data, transformando-o numa string no formato ascii e essa string ta no formato '%Y-%m-%d' ano, mes e dia # type: ignore
+# dias = np.empty((dataPetr.shape[0]), dtype=datetime) #arrays separados: este é o dias, criado vazio
+# valores = np.empty((dataPetr.shape[0]), dtype=np.float64) #arrays separados: este é o valores, criado vazio 'empty'
+
+# i = 0
+# for d in dataPetr:
+#     dias[i] = d[0] #dados da coluna 0
+#     valores[i] = d[1] #dados da coluna 5
+#     i += 1
+
+# plt.plot(dias,valores, "b-.", label = "PETR3")
+# plt.legend(loc="upper left")
+# plt.ylabel("Preço (R$)")
+# plt.xlabel("Data")
+# plt.show()
+
+# -----------------------
+# Adicionando PRIO3
+# import matplotlib.pyplot as plt
+# from datetime import datetime
+# import numpy as np
+
+# data_petr = np.genfromtxt('c:/users/particular/desktop/PETR3.SA.csv', delimiter=',', skip_header = 1, usecols = (0,5), converters={0: lambda
+# x: datetime.strptime(x.decode('ascii'), "%Y-%m-%d")})
+# dias = np.empty((data_petr.shape[0]), dtype=datetime)
+# valores_petr = np.empty((data_petr.shape[0]), dtype=np.float64)
+
+# data_prio = np.genfromtxt('c:/users/particular/desktop/PRIO3.SA.csv', delimiter=',', skip_header = 1, usecols = (0,5), converters={0: lambda
+# x: datetime.strptime(x.decode('ascii'), "%Y-%m-%d")})
+# valores_prio = np.empty((data_prio.shape[0]), dtype=np.float64)
+
+# i = 0
+# while(i < data_petr.shape[0]):
+#  dias[i] = data_petr[i][0]
+#  valores_petr[i] = data_petr[i][1]
+#  valores_prio[i] = data_prio[i][1]
+#  i += 1
+
+# plt.plot(dias,valores_petr, "b-.", label = "PETR3")
+# plt.plot(dias,valores_prio, "k:", label = "PRIO3")
+# plt.legend(loc="upper left")
+# plt.ylabel("Preço (R$)")
+# plt.xlabel("Data")
+# plt.show()
+
+# ----------------------
+# Figure
+# Manipulações mais complexas podem exigir o uso de uma variável do tipo Figure
+# Retornada pela função plt.figure()
+
+# add_subplot
+# É possível adicionar sub gráficos (subplots) em uma Figure através de add_subplot(linhas, colunas, idx)
+# Considerando que o gráfico completo é um grid (matriz) de NxM
+    # Linhas: indica o número de linhas no grid
+    # Colunas: indica o número de colunas no grid
+    # Idx: índice do subgráfico no gráfico
+
+# Adicionando em subgráficos
+# Funções como plt.plot(), plt.legend(), plt.xlabel() 
+    # vão criar gráficos e alterar o último subplot adicionado, somente o último
+
+# import matplotlib.pyplot as plt
+# from datetime import datetime
+# import numpy as np
+
+# data_petr = np.genfromtxt('c:/users/particular/desktop/PETR3.SA.csv', delimiter=',', skip_header = 1, usecols = (0,5), converters={0: lambda
+# x: datetime.strptime(x.decode('ascii'), "%Y-%m-%d")})
+# dias = np.empty((data_petr.shape[0]), dtype=datetime)
+# valores_petr = np.empty((data_petr.shape[0]), dtype=np.float64)
+
+# data_prio = np.genfromtxt('c:/users/particular/desktop/PRIO3.SA.csv', delimiter=',', skip_header = 1, usecols = (0,5), converters={0: lambda
+# x: datetime.strptime(x.decode('ascii'), "%Y-%m-%d")})
+# valores_prio = np.empty((data_prio.shape[0]), dtype=np.float64)
+
+# i = 0
+# while(i < data_petr.shape[0]):
+#  dias[i] = data_petr[i][0]
+#  valores_petr[i] = data_petr[i][1]
+#  valores_prio[i] = data_prio[i][1]
+#  i += 1
+
+# fig = plt.figure() #chama a função figure retornada na variavel 'fig'
+# fig.add_subplot(2, 1, 1, title= "Gráfico da Petrobras") #cria um subgrafico com 2 linhas e 1 coluna. o ultimo 1 significa que é o primeiro graifco, ficando na parte de cima
+# plt.plot(dias,valores_petr, "b-.", label = "PETR3")
+# plt.legend(loc="upper left")
+# plt.ylabel("Preço (R$)")
+# plt.xlabel("Data")
+
+#                     #outro subgrafico, igual ao primeiro
+# fig.add_subplot(2, 1, 2, title= "Gráfico da PetroRio")
+# plt.plot(dias,valores_prio, "k:", label = "PRIO3")
+# plt.legend(loc="upper left")
+# plt.ylabel("Preço (R$)")
+# plt.xlabel("Data")
+# plt.show()
+
+# ----------------------
+
+
+
 
 
 
