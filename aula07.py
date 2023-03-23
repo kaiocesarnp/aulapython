@@ -31,8 +31,23 @@
 # Aplicando condições diretamente
 # É possível aplicar condições diretamente no operador []
 
-import numpy as np
-valores = np.random.randint(0, 10, (5, 4))
-print(valores)
-valores[(valores < 3) | (valores == 9)] = 33 #todo valor menor que 3 ou igual a 9 será substituido por 33
-print(valores)
+# import numpy as np
+# valores = np.random.randint(0, 10, (5, 4))
+# print(valores)
+# valores[(valores < 3) | (valores == 9)] = 33 #todo valor menor que 3 ou igual a 9 será substituido por 33
+# print(valores)
+
+# --------------
+# Matrizes de máscaras
+# É possível ainda criar matrizes de “máscaras”, que podem ser usadas para algum pós-processamento
+
+# import numpy as np
+
+# valores = np.random.randint(0, 10, (5, 4))
+# print(valores)
+# mascara = valores < 5 #determina true ou false dependendo se o valor for menor ou não que 5
+# print(mascara)
+# mascara = mascara.astype(int) #reinterpreta a matriz de booleanos 'mascara = valores', como uma matriz de inteiros
+# print(mascara) #o que é true vira 1 e o que é false vira 0
+
+# ------------------
