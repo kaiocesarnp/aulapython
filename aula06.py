@@ -331,3 +331,56 @@ np.savetxt("c:/users/particular/desktop/aula06.csv", dados, delimiter=";", fmt="
 #--------------------------------------
 # EXERCÍCIOS
 # Questão 01
+# Ao executar o trecho a seguir, o que será armazenado na variável vetor1?
+
+# import numpy as np
+# vetor1 = np.arange(-2, 10, 1)
+# print(vetor1)
+
+
+# Escolha uma opção:
+# a. [-2 -1  0  1]
+# b. [-2 -1  0]
+# c. [-2 -1  0  1  2  3  4  5  6  7  8  9 10]
+# d. [-2 -1  0  1  2  3  4  5  6  7  8  9]    RESPOSTA
+# e. [-1  0  1  2  3  4  5  6  7  8  9]
+
+# -------------
+# Questão 02
+# Ao executar o trecho a seguir, o que será armazenado em vetor2?
+
+# import numpy as np
+# vetor2 = np.linspace(5, 6, 9)
+
+# print(vetor2)
+
+# Escolha uma opção:
+# a. [ 5.     5.625  6.25   6.875  7.5    8.125  8.75   9.375]
+# b. [5.0         5.11111111 5.22222222 5.33333333 5.44444444 5.55555556  5.66666667 5.77777778 5.8888888]
+# c. [5.0    5.125 5.25  5.375 5.5   5.625 5.75  5.875]
+# d. [5.0    5.125 5.25  5.375 5.5   5.625 5.75  5.875 6.0 ]        RESPOSTA
+# e. [ 5.0     5.625  6.25   6.875  7.5    8.125  8.75   9.375 10.0 ]
+
+# -----------------
+# Questão 03
+# Considere um arquivo chamado dados.csv com as seguintes três linhas de conteúdo
+# 1;2;3
+# 1;2;3
+# 1;2;3
+# Ao executar o programa a seguir, o que será impresso na tela?
+
+import numpy as np
+dados = np.genfromtxt("dados.csv", delimiter=';', skip_header= 0, dtype=np.intc)
+
+resultado1 = dados[1].sum()
+resultado2 = dados.sum(0)[2]
+
+print(resultado1, resultado2)
+
+
+# Escolha uma opção:
+# a. 18 9
+# b. 9 6
+# c. 3 6 9
+# d. 6 9
+# e. 6 6
