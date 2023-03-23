@@ -1,0 +1,2 @@
+# NumPy - Operações Lógicas
+# 
