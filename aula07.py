@@ -292,10 +292,53 @@
 # plt.show()
 
 # ----------------------
+# Tipos de Gráficos
+# Existem diversos outros tipos de gráficos
+    # Gráficos de barra
+    # Scatter
+    # Pizza
+    # Boxplot
+# Veja uma lista aqui matplotlib.org/3.5.1/plot_types/index.html
 
+# Exemplo
+# Mostrar como gráficos de barras os preços das ações 
+    # referentes aos 30 primeiros dias das séries
 
+import matplotlib.pyplot as plt
+from datetime import datetime
+import numpy as np
 
+data_petr = np.genfromtxt('c:/users/particular/desktop/PETR3.SA.csv', delimiter=',', skip_header = 1, usecols = (0,5), converters={0: lambda
+x: datetime.strptime(x.decode('ascii'), "%Y-%m-%d")})
+dias = np.empty((data_petr.shape[0]), dtype=datetime)
+valores_petr = np.empty((data_petr.shape[0]), dtype=np.float64)
 
+data_prio = np.genfromtxt('c:/users/particular/desktop/PRIO3.SA.csv', delimiter=',', skip_header = 1, usecols = (0,5), converters={0: lambda
+x: datetime.strptime(x.decode('ascii'), "%Y-%m-%d")})
+valores_prio = np.empty((data_prio.shape[0]), dtype=np.float64)
+
+i = 0
+while(i < 30):
+ dias[i] = data_petr[i][0]
+ valores_petr[i] = data_petr[i][1]
+ valores_prio[i] = data_prio[i][1]
+ i += 1
+
+fig= plt.figure()
+fig.add_subplot(2,1,1)
+plt.bar(dias,valores_petr, label= "PETR3") #'plt.bar' gráfico de barras
+plt.legend(loc="upper left")
+plt.ylabel("Preço (R$)")
+plt.xlabel("Data")
+
+fig.add_subplot(2,1,2)
+plt.bar(dias,valores_prio, label= "PRIO3")
+plt.legend(loc="upper left")
+plt.ylabel("Preço (R$)")
+plt.xlabel("Data")
+plt.show()
+
+# ------------------
 
 
 
