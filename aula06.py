@@ -369,18 +369,40 @@ np.savetxt("c:/users/particular/desktop/aula06.csv", dados, delimiter=";", fmt="
 # 1;2;3
 # Ao executar o programa a seguir, o que será impresso na tela?
 
-import numpy as np
-dados = np.genfromtxt("dados.csv", delimiter=';', skip_header= 0, dtype=np.intc)
+# import numpy as np
+# dados = np.genfromtxt("c:/users/particular/desktop/dados.csv", delimiter=';', skip_header= 0, dtype=np.intc)
 
-resultado1 = dados[1].sum()
-resultado2 = dados.sum(0)[2]
+# resultado1 = dados[1].sum()
+# resultado2 = dados.sum(0)[2]
 
-print(resultado1, resultado2)
+# print(resultado1, resultado2)
 
 
 # Escolha uma opção:
 # a. 18 9
 # b. 9 6
 # c. 3 6 9
-# d. 6 9
+# d. 6 9                RESPOSTA
 # e. 6 6
+
+# --------------
+# Questão 04
+# Ao executar o trecho a seguir, qual será o conteúdo de matriz?
+
+# import numpy as np
+
+# matriz = np.random.rand(3, 3)
+# matriz += 10
+
+# print(matriz)
+
+# Escolha uma opção:
+# a. [[10.96277336 10.77131048 10.29036725]
+#  [10.90971314 10.97634304 10.24865363]
+#  [10.61429699 10.52034975 10.84331219]]
+# b. Não podemos inferir nada sobre o conteúdo já que ele é aleatório.
+# c. Será uma matriz de 3x3 com valores aleatórios entre 0 e 1 (sem incluir o 1)
+# d. Será uma matriz de 3x3 com valores aleatórios entre 10 e 11 (sem incluir o 11)    RESPOSTA
+# e. O programa está incorreto e resulta em um erro.
+
+# -------------
