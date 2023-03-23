@@ -51,3 +51,60 @@
 # print(mascara) #o que é true vira 1 e o que é false vira 0
 
 # ------------------
+# Veja mais sobre where e operadores lógicos em
+# numpy.org/doc/stable/reference/generated/numpy.where.html
+# numpy.org/doc/stable/reference/routines.logic.html
+# www.geeksforgeeks.org/numpy-array-logical-operations
+
+# Ordenação e Estatística Básica
+
+# Ordenando
+# Para ordenar um array NumPy, basta chamar a função sort()
+
+# import numpy as np
+# valores = np.random.randint(0, 6, (5, 5))
+# print(valores)
+# valores.sort(axis=0) #axis = 0 é padrao, caso não haja, dá no mesmo. Usar o axis depende de quantas dimensões têm na matriz
+# print(valores)
+
+# --------------
+# Média
+# A média dos elementos pode ser computada através da função mean()
+# De maneira similar, é possível calcular
+#     Média ponderada: average()
+#     Desvio padrão: std()
+#     Variância: var()
+# …
+# Veja mais em
+# numpy.org/doc/stable/reference/routines.statistics.html
+
+# -------------
+# Máximo e Mínimo
+# As funções max() e min() podem ser usadas para se encontrar o maior e o menor valor em um Array NumPy
+
+
+# ---------------
+# Argmax e Argmin
+# É possível encontrar o índice do maior e menor valor no array utilizando argmax() e argmin()
+# Caso exista mais de uma cópia do maior/menor valor, o índice da primeira ocorrência é retornado
+
+
+# -----------------
+#Exemplo
+# Considere o arquivo TRE-BA.csv disponibilizado
+# A coluna 62 (mov_count) contém a contagem de movimentos de cada processo
+# Vamos calcular:
+    # A quantidade média de movimentos
+    # O desvio padrão
+    # O maior e menor número de movimentos
+    # O índice dos (primeiros) processos com o maior e menor número de movimentos
+
+# import numpy as np
+# data = np.genfromtxt('TRE-BA.csv', delimiter=';', skip_header = 1, usecols = (62), dtype=(np.intc))
+# print(data.mean())
+# print(data.max())
+# print(data.min())
+# print(data.argmax())
+# print(data.argmin())
+
+# --------------------
