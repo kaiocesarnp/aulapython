@@ -406,5 +406,13 @@
 # Cada agrupamento é um bin
 # Bins também são conhecidos como buckets (baldes)
 
+import matplotlib.pyplot as plt
+import numpy as np
+
+data = np.genfromtxt('c:/users/particular/desktop/dados.csv', delimiter=';', skip_header = 1, usecols = (1),
+dtype=np.int32)
+
+plt.hist(data, bins=4,edgecolor="white")
+plt.show()
 
 
