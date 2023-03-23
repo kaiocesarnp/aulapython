@@ -159,6 +159,34 @@
 
 # -----------------
 # Legendas
+# É possível adicionar legendas
+# Nas séries
+    # Adicione a série com plt.plot(..., label = "legenda" )
+    # Antes de chamar show(), configure a posição com 'plt.legend(loc="posição")'
+# Veja as posições possíveis em: matplotlib.org/3.5.0/api/_as_gen/matplotlib.pyplot.legend.html
+
+# Legendas nos eixos x e y podem se adicionadas através de
+# plt.ylabel("Nome eixo y")
+# plt.xlabel("Nome eixo x")
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+# x= np.arange(0,10,1)
+# y2 = x**2 #f(x) = x^2
+# y3 = x**3 #f(x) = x^3
+
+# plt.plot(x,y2, "b-.", label= "x^2") #nome da legenda = x^2
+# plt.plot(x,y3, "k:", label= "x^3") #nome da legenda = x^3
+# plt.legend(loc="upper left") #legenda aparecerá no canto superior esquerdo
+# plt.ylabel("Eixo Y") #nome do eixo = eixo y
+# plt.xlabel("Eixo X") #nome do eixo = eixo x
+# plt.show()
+
+# -----------------
 # 
+
+
+
 
 
