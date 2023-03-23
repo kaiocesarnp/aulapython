@@ -20,9 +20,19 @@
 # & representa um e lógico
 # | representa um ou lógico
 
-import numpy as np
+# import numpy as np
 
+# valores = np.random.randint(0, 10, (5, 4))
+# print(valores)
+# resultado = np.where((valores >= 3) & (valores <= 7), valores, 10*valores) #valores iguais ou maiores que 3 e menores ou iguais a 7 são mantidos. Do contrário, multiplca0se por 10
+# print(resultado)
+
+# --------------
+# Aplicando condições diretamente
+# É possível aplicar condições diretamente no operador []
+
+import numpy as np
 valores = np.random.randint(0, 10, (5, 4))
 print(valores)
-resultado = np.where((valores >= 3) & (valores <= 7), valores, 10*valores) #valores iguais ou maiores que 3 e menores ou iguais a 7 são mantidos. Do contrário, multiplca0se por 10
-print(resultado)
+valores[(valores < 3) | (valores == 9)] = 33 #todo valor menor que 3 ou igual a 9 será substituido por 33
+print(valores)
