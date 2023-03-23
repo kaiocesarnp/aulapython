@@ -406,13 +406,29 @@
 # Cada agrupamento é um bin
 # Bins também são conhecidos como buckets (baldes)
 
-import matplotlib.pyplot as plt
-import numpy as np
+# import matplotlib.pyplot as plt
+# import numpy as np
 
-data = np.genfromtxt('c:/users/particular/desktop/dados.csv', delimiter=';', skip_header = 1, usecols = (1),
-dtype=np.int32)
+# data = np.genfromtxt('c:/users/particular/desktop/dados.csv', delimiter=';', skip_header = 1, usecols = (1),
+# dtype=np.int32)
 
-plt.hist(data, bins=4,edgecolor="white")
-plt.show()
+# plt.hist(data, bins=10,edgecolor="white") #bins = baldes do mesmo tamanho
+# plt.show()
+
+# -------------------------
+# É possível ainda especificar um tamanho para cada bin, e o tamanho dos bins não precisa ser o mesmo para todos.
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+# data = np.genfromtxt('c:/users/particular/desktop/dados.csv', delimiter=';',
+# skip_header = 1, usecols = (1), dtype=np.int32)
+
+# plt.hist(data, bins=(0,25,50,70,80,90,100),edgecolor="white") #0 a 24 dentro de um bin, 25 a 49 noutro, 50 a 69 em outro...
+# plt.show()
+
+# ---------------------
+# EXERCÍCIOS
+
 
 
