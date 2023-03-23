@@ -108,3 +108,57 @@
 # print(data.argmin())
 
 # --------------------
+# Matplotlib
+# Pacote para criar gráficos
+# Principalmente gráficos bidimensionais
+# Projeto iniciado em 2002 por John Hunter
+# Muitos dos comandos e lógicas envolvidas nos gráficos são
+# compatíveis com ferramentas como MATLAB e Octave
+
+# import matplotlib.pyplot as plt #utliza as funções do pacote pyplot do matplotlib e imprime os dados em formato de gráfico
+# import numpy as np #gera os dados 
+
+# x = np.arange(0,10,1) #cria um vetor de 0 a 10, sem incluir o 10, pulando de 1 em 1
+# y = x**2 #f(x) = x^2   ===== cada valor de x é elevado ao quadrado
+
+# plt.plot(x,y) #A função matplotlib.pyplot.plot(x,y) recebe dois vetores contendo os valores de x, e os respectivos valores de y.
+# plt.show() #mostra os dados criados
+
+# -----------------
+# Multiplas Séries
+# Uma das formas de se adicionar múltiplas séries, é chamando matplotlib.pyplot.plot(x,y) múltiplas vezes
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+# x = np.arange(0,10,1)
+# y2 = x**2 #f(x) = x^2
+# y3 = x**3 #f(x) = x^3  #cada vetor é elevado ao cubo
+
+# plt.plot(x,y2)
+# plt.plot(x,y3)
+# plt.show()
+
+# ------------------
+# Estilizando
+# É possível trocar as cores e estilo das linhas
+# Para uma listagem completa dos estilos de cores e linhas
+# matplotlib.org/3.5.1/tutorials/colors/colors.html
+# matplotlib.org/2.1.2/api/_as_gen/matplotlib.pyplot.plot.html
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+# x = np.arange(0,10,1)
+# y2 = x**2 #f(x) = x^2
+# y3 = x**3 #f(x) = x^3
+
+# plt.plot(x,y2, "b-.")   #b- para azul (blue) com linha tracejada
+# plt.plot(x,y3, "k:")    #k: para preto com linha pontilhada
+# plt.show()
+
+# -----------------
+# Legendas
+# 
+
+
