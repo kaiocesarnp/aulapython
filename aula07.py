@@ -384,6 +384,27 @@
 # plt.savefig("c:/users/particular/desktop/graficoaula7.pdf")
 
 # ---------------------
+# Histograma
+# Um histograma geralmente é representado através de um gráfico de barras
+# Gera uma aproximação visual da distribuição dos dados
+
+# Para gerar um histograma via Matplotlib, basta chamar a função hist()
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+# x = np.array([2,1,1,4,5,5,3,4,4,5,5,5,6,7,7,7])
+
+# plt.hist(x, bins=7,edgecolor="red") #plt.hist para mostrar o histograma, 'edgecolor="red"' = barras com laterais vermelhas 
+# plt.show()
+
+# --------------
+# Bins
+# Muitas vezes, desejamos agrupar os dados em bins
+# Por exemplo, desejamos agrupar todos os valores entre 1 e 3
+#     em uma única barra, os valores entre 4 e 6 em outra, …
+# Cada agrupamento é um bin
+# Bins também são conhecidos como buckets (baldes)
 
 
 
