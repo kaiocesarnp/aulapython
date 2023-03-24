@@ -62,8 +62,8 @@
 # index: uma lista de rótulos para o eixo.          Opcional, pois se passar só os dados, ja é tranformada numa série 
 
 # Exemplo:
-# import pandas as pd
 
+# import pandas as pd
 # serie2 = pd.Series([4, 7, 1], index=['d', 'g', 'a'])
 # print(serie2)
 # type(serie2)
@@ -71,4 +71,21 @@
     # lista de valores inteiros, e o index representa o indice de cada valor inteiro, ou seja, d=4, g=7
 
 # ---------------
+# dicionario
 
+# import pandas as pd
+# dict2 = {'a': 0, 'b': 1, 'c': 2}
+# serie2 = pd.Series(dict2) 
+# print(serie2)
+# type(serie2)
+
+# ------------
+# dicionario com novos indices:
+
+# import pandas as pd
+# dict2 = {'a': 0, 'b': 1, 'c': 2}
+# serie2 = pd.Series(dict2, index=["b", "c", "d", "a"]) 
+# print(serie2)
+# type(serie2)
+
+# ------------
