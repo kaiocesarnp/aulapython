@@ -84,8 +84,9 @@
 
 # import pandas as pd
 # dict2 = {'a': 0, 'b': 1, 'c': 2}
-# serie2 = pd.Series(dict2, index=["b", "c", "d", "a"]) 
+# serie2 = pd.Series(dict2, index=["b", "c", "d", "a"])   # o 'd' vira NaN, que é um ponto flutuante
 # print(serie2)
 # type(serie2)
 
-# ------------
+# ----------------------
+
