@@ -47,9 +47,28 @@
 # Criação de uma Série
 # Os dados de uma série podem ser várias coisas, por exemplo:
 # 1. Uma lista = (lista = [10, 11, 12])
-# 2. Um ndarray (array n-dimensional NumPy) = (ndata = np.random.randn(3))
+# 2. Um ndarray (array n-dimensional NumPy) = (ndata = np.random.randn(3)) = gera um vetor ndimensional numpy aleatorio com tres numeros aleatorios obedecendo uma distribuição normal/padrao centrada em 0 
 # 3. Um escalar = pd.Series(3) 
 # 4. Uma tupla = (dtup = (11, 22))
 # 5. Um dicionário Python = (dict = {‘a’: 1, ‘b’: 2})
 
+# ------------------
+# Indexação “personalizada” de Series
+# O método básico para ser criar uma série é:
+# S = pd.Series(dados, index=indice) 
+# S = variavel que recebe a serie
+# pd.Series = construtor 
+# dados: objetos como citado nos slides anteriores
+# index: uma lista de rótulos para o eixo.          Opcional, pois se passar só os dados, ja é tranformada numa série 
+
+# Exemplo:
+# import pandas as pd
+
+# serie2 = pd.Series([4, 7, 1], index=['d', 'g', 'a'])
+# print(serie2)
+# type(serie2)
+
+    # lista de valores inteiros, e o index representa o indice de cada valor inteiro, ou seja, d=4, g=7
+
+# ---------------
 
