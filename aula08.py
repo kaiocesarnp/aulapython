@@ -89,4 +89,13 @@
 # type(serie2)
 
 # ----------------------
+# Acesso a elementos de Series
+# A forma para se acessar um valor de uma série indexada é igual a outros objetos:
+# import pandas as pd
+# serie1 = pd.Series([10, 11, 12])
+# print(serie1)
+# type(serie1)
+
+#----------------
+
 
