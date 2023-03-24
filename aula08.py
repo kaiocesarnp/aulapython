@@ -43,6 +43,13 @@
 # serie.index = para ver os indices, RangeIndex(start=0, stop=10, step=1) = do 0 ao 9, pulado de 1 em 1
 # type(serie.index)  = tipo de indices        RangeIndex = indice de intervalo
 
-
+# -------------------
+# Criação de uma Série
+# Os dados de uma série podem ser várias coisas, por exemplo:
+# 1. Uma lista = (lista = [10, 11, 12])
+# 2. Um ndarray (array n-dimensional NumPy) = (ndata = np.random.randn(3))
+# 3. Um escalar = pd.Series(3) 
+# 4. Uma tupla = (dtup = (11, 22))
+# 5. Um dicionário Python = (dict = {‘a’: 1, ‘b’: 2})
 
 
