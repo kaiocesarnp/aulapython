@@ -38,6 +38,11 @@
     # indo de 0 até N-1 (onde N é o comprimento dos dados)...
 
 # ----------------------
+#  serie.values  = para ver os valores
+# type(serie.values)  = tipo dos valores
+# serie.index = para ver os indices, RangeIndex(start=0, stop=10, step=1) = do 0 ao 9, pulado de 1 em 1
+# type(serie.index)  = tipo de indices        RangeIndex = indice de intervalo
+
 
 
 
