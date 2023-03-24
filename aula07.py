@@ -429,6 +429,23 @@
 
 # ---------------------
 # EXERCÍCIOS
+# Questão 01
+# Considere o trecho a seguir e indique o que será impresso na tela.
 
+# import numpy as np
+# x = np.arange(0, 100, 2)
+# y = x[np.argmax(x)]
+# print(y)
+
+# Escolha uma opção:
+# a. 50
+# b. 98                RESPOSTA
+# c. 100
+# d. 49
+# e. 99
+
+# ---------------------
+# Questão 02
+# 
 
 
