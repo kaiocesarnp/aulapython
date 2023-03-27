@@ -97,5 +97,13 @@
 # type(serie1)
 
 #----------------
+# Operações sobre Series
+
+# SOMAR todos os elementos:
+    # serie.sum() 
+
+# Encontrar o VALOR MÁXIMO:
+    #serie.max( )
+
 
 
