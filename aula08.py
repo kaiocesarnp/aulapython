@@ -119,7 +119,7 @@
 
 # ---------------------
 # O Método describe()
-# serie.describe() 
+# serie.describe()
 # O método describe gera estatísticas descritivas!
 # Resume tendências centrais, dispersão e formato de uma distribuição de dados, excluíndo valores NaN.
     # Permite analisar dados numéricos e objetos:
