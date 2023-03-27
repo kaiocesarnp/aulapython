@@ -181,3 +181,33 @@
 
 # ---------------------------
 # Questão 02
+
+# Considere o código abaixo. Baseado na execução do programa e o arquivo "stairwaytoheaven.txt" 
+    # servindo como parâmetro para o primeiro argumento de entrada, assinale a alternativa correta.
+
+# import sys
+# import pandas as pd
+
+# arquivo = open(sys.argv[1]).read()
+# arquivo = open("c:/users/particular/desktop/stairwaytoheaven.txt").read()
+
+
+# text = [palavra.strip("\n") for palavra in arquivo.split()]
+# s1 = pd.Series(text)
+
+# print(s1.describe())
+
+
+#  i. Há 348 palavras na lista atribuída à variável "text".
+# ii. Do total de palavras, se desconsiderarmos as palavras repetidas, temos 174 palavras distintas.
+# iii. A palavra que aparece mais vezes é "heaven", com frequência igual a 15.
+# iv. O método describe() não funciona com séries baseadas em strings.
+
+# Escolha uma ou mais:
+# a. Todas as assertivas são FALSAS.
+# b. Somente a assertiva iv é FALSA.
+# c. Somente as assertivas ii e iv são FALSAS.
+# d. Somente a assertiva i é VERDADEIRA.                    RESPOSTA
+# e. Somente as assertivas i e iii são VERDADEIRAS.
+
+# ---------------
