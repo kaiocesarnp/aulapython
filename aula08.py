@@ -126,6 +126,23 @@
     # Para dados numéricos, inclui:
     # Contagem, média, descio padrão, valores mínimo e máximo, e percentis
 
+# Para dados de objetos, o resultado inclui:
+    #Contagem, únicos, top (mais comum) e frequência (valor do elemento top)
+
+# l = ['a', 'a', 'b', 'c', 'd', 'a', 'c']
+    #s = pd.Series(l)
+
+# s.describe()
+# count 7           7 valores
+# unique 4          4 são unicos
+# top a             o A é que aparece mais vezes 
+# freq 3            a frequencia do top é 3
+# dtype: object 
+
+# --------------------
+# EXERCÍCIOS
+# 
+
 
 
 
