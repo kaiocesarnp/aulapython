@@ -63,34 +63,35 @@
         # Quando se imprime o dataframe criado a partir de uma série, os indices já foram obtidos
         # a partir das chaves do dicionário, e como os valores são litas, assume-se que via
         # 'serie1', há apenas uma coluna (a coluna zero [0]), composta de 3 listas
-import pandas as pd
+# import pandas as pd
 
-dados = {
-'nome': ["Ana", "Bob",
-"Cleo"],
-'idade': [50, 36, 2],
-'altura': [1.5, 1.73, .61]
-}
+# dados = {
+# 'nome': ["Ana", "Bob",
+# "Cleo"],
+# 'idade': [50, 36, 2],
+# 'altura': [1.5, 1.73, .61]
+# }
 
-serie1 = pd.Series(dados)
-df1 = pd.DataFrame(serie1)
-print(df1)
+# serie1 = pd.Series(dados)
+# df1 = pd.DataFrame(serie1)
+# print(df1)
 
 # --------------
 # Forma certa:
                 # 3 colunas, sendo as chaves do dicionario. Uma coluna só com nomes, outra só com
                 # idades, outra só com altura.
-import pandas as pd
+# import pandas as pd
 
-dados = {
-'nome': ["Ana", "Bob",
-"Cleo"],
-'idade': [50, 36, 2],
-'altura': [1.5, 1.73, .61]
-}
+# dados = {
+# 'nome': ["Ana", "Bob",
+# "Cleo"],
+# 'idade': [50, 36, 2],
+# 'altura': [1.5, 1.73, .61]
+# }
 
-df1 = pd.DataFrame( dados)
-print(df1)
+# df1 = pd.DataFrame( dados)
+# print(df1)
 
-
+# -----------------------------------------------
+# DataFrame - Entradas (* CUIDADO!)
 
