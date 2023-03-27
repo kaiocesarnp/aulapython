@@ -105,5 +105,29 @@
 # Encontrar o VALOR MÁXIMO:
     #serie.max( )
 
+# Encontrar o VALOR MÍNIMO:
+    #serie.min( )
+
+# serie.median()  Mediana
+    # 1.5
+
+#serie.mean()   Média
+    # 13.3
+
+# Documentação:
+# https://pandas.pydata.org/docs/reference/api/pandas.Series.html
+
+# ---------------------
+# O Método describe()
+# serie.describe() 
+# O método describe gera estatísticas descritivas!
+# Resume tendências centrais, dispersão e formato de uma distribuição de dados, excluíndo valores NaN.
+    # Permite analisar dados numéricos e objetos:
+    # Para dados numéricos, inclui:
+    # Contagem, média, descio padrão, valores mínimo e máximo, e percentis
+
+
+
+
 
 
