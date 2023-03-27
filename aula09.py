@@ -167,3 +167,8 @@ print(df1)                                          #serie1 e index que recebe u
 
 # A chave “TRE-4” não está presente no dicionário de entrada (“dados”)
 
+# ----------------------------------
+
+# Métodos
+# Acesso às dimensões
+
