@@ -95,3 +95,76 @@
 # -----------------------------------------------
 # DataFrame - Entradas (* CUIDADO!)
 
+import pandas as pd
+
+dados = {
+'nome': ["Ana", "Bob",
+"Cleo"],
+'idade': [50, 36, 2],
+'altura': [1.5, 1.73, .61]
+}
+
+serie1 = pd.Series(dados)
+df1 = pd.DataFrame(serie1, index=['a', 'nome', 'c'])   #dois parametros passados na construção do dataframe
+print(df1)                                          #serie1 e index que recebe uma lista de indices
+                                                    #que não estão na lista original então nada será
+                                                    # impresso na saída, só NaN. Uma coluna só [0]
+
+
+# DataFrame - Entradas de dict
+# O índice resultante é a união dos índices… Exemplo:
+# dados = {
+#  "TRE-1": pd.Series([1, 0, 5], index=["1/jan/2022", "31/jan/2022", "2/fev/2022"]),
+#  "TRE-2": pd.Series([3, 10], index=["1/jan/2022", "1/fev/2022"]),
+#  "TRE-3": pd.Series([0, 2, 1, 4], index=["31/jan/2022", "2/fev/2022", "10/fev/2022", "31/mar/2022"])
+#  }
+
+# df = pd.DataFrame(dados)
+
+# RESULTADO:
+#             TRE-1   TRE-2   TRE-3
+# 1/fev/2022  NaN     10.0    NaN
+# 1/jan/2022  1.0     3.0     NaN
+# 10/fev/2022 NaN     NaN     1.0
+# 2/fev/2022  5.0     NaN     2.0
+# 31/jan/2022 0.0     NaN     0.0
+# 31/mar/2022 NaN     NaN     4.0      
+    # Ordem alfabética das string, 1 vem antes do 10, que vem antes do 31
+# Se nenhum parâmetro é passado para o argumento “columns”, 
+    # elas serão a lista de chaves do dicionário…
+
+# --------------
+# O índice passado pode sobrepor os existentes, causando seleção de dados… Exemplo:
+# dados = {
+#  "TRE-1": pd.Series([1, 0, 5], index=["1/jan/2022", "31/jan/2022", "2/fev/2022"]),
+#  "TRE-2": pd.Series([3, 10], index=["1/jan/2022", "1/fev/2022"]),
+#  "TRE-3": pd.Series([0, 2, 1, 4], index=["31/jan/2022", "2/fev/2022", "10/fev/2022", "31/mar/2022"])
+#  }
+
+# df = pd.DataFrame(dados, index=["1/jan/2022", "1/fev/2022", "1/mar/2022"])
+
+#             TRE-1 TRE-2     TRE-3
+# 1/jan/2022  1.0     3.0     NaN
+# 1/fev/2022  NaN     10.0    NaN
+# 1/mar/2022  NaN     NaN     NaN
+    # O índice “1/mar/2022” não está associado a nenhum dado…
+
+# ----------------
+# DataFrame - Entradas de dict
+# As colunas também “selecionam” os dados… Exemplo:
+
+# dados = {
+#  "TRE-1": pd.Series([1, 0, 5], index=["1/jan/2022", "31/jan/2022", "2/fev/2022"]),
+#  "TRE-2": pd.Series([3, 10], index=["1/jan/2022", "1/fev/2022"]),
+#  "TRE-3": pd.Series([0, 2, 1, 4], index=["31/jan/2022", "2/fev/2022", "10/fev/2022", "31/mar/2022"])
+#  }
+# df = pd.DataFrame(dados, index=["1/jan/2022", "1/fev/2022", "1/mar/2022"], columns=["TRE-2", "TRE-4"])
+
+#             TRE-2   TRE-4
+# 1/jan/2022  3.0     NaN
+# 1/fev/2022  10.0    NaN
+# 1/mar/2022  NaN     NaN
+
+# A chave “TRE-4” não está presente no dicionário de entrada (“dados”)
+
+
