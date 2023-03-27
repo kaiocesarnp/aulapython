@@ -141,10 +141,43 @@
 
 # --------------------
 # EXERCÍCIOS
-# 
+# Questão 01
+# Suponha os códigos a seguir. Associe cada um deles com a saída correta esperada.
+# ATENÇÃO: Pode haver mais de um código com a mesma saída!
 
+# import pandas as pd
 
+# lis1 = [1, 2]
+# ser1 = pd.Series(lis1, index =["b", "a"])
+# print(ser1.values)
 
+# -------
+# import pandas as pd
 
+# lis1 = [1, 2]
+# ser1 = pd.Series(lis1)
+# print(ser1.index)
 
+# -------
+# import pandas as pd
 
+# dic1 = {"a":1, "b":2}
+# ser1 = pd.Series(dic1)
+# print(ser1.index)
+
+# -------
+# import pandas as pd
+
+# lis1 = [1, 2]
+# ser1 = pd.Series(lis1, index =["b", "a"])
+# print(ser1.index)
+
+# -------
+# import pandas as pd
+
+# lis1 = [1, 2]
+# ser1 = pd.Series(lis1, index =["a", "b"])
+# print(ser1.values)
+
+# ---------------------------
+# Questão 02
