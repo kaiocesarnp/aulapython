@@ -203,3 +203,74 @@ print(minaltura)
 print(mediaaltura)
 print(somaidades)
 
+# ---------------------------
+# Operações
+
+# ▸ Inserção de novas colunas
+# ▸ Remoção de colunas
+# ▸ Concatenação de dados
+# ▸ Remoção de duplicatas
+# ▸ Ajuste de índices
+# ▸ Identificação de dados faltantes
+# ▸ Preenchimento de dados faltantes
+
+# -------------
+# Inserção:
+# NOVA LISTA DE VALORES:
+#  Pesos = [50.8, 75, 11.3]
+# INSERÇÃO DA COLUNA
+#  df['peso'] = Pesos
+
+# ------
+# Remoção:
+#   nome  idade altura peso
+# 0 Ana    50    1.50    1
+# 1 Bob    36    1.73    2
+# 2 Cleo   2     0.61    3
+
+# del df['nome']
+
+# -------
+# Remoção 2:
+
+#       idade   altura    peso
+# 0     50      1.50    1
+# 1     36      1.73    2
+# 2     2       0.61    3
+
+# df.pop['peso']
+
+# ----------
+# Concatenação de novos dados
+# df2 = pd.DataFrame([[50, 1.50]],
+#  columns=['idade', 'altura'])
+
+#       idade altura
+# 0     50      1
+
+# -------------
+# Concatenar Dataframes
+# pd.concat([df, df2])
+
+# df
+#       idade   altura
+# 0     50      1.50
+# 1     36      1.73
+# 2     2       0.61
+
+# df2
+#       idade   altura
+# 0     50      1.50
+
+# Resultado:
+#       idade   altura
+# 0     50      1.50
+# 1     36      1.73
+# 2     2       0.61
+# 0     50      1.50    Nova linha inserida!
+
+# ----------
+
+
+
+
