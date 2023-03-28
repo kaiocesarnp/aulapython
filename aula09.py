@@ -250,7 +250,7 @@ print(somaidades)
 
 # -------------
 # Concatenar Dataframes
-# pd.concat([df, df2])
+# df3 = pd.concat([df, df2])
 
 # df
 #       idade   altura
@@ -262,14 +262,24 @@ print(somaidades)
 #       idade   altura
 # 0     50      1.50
 
-# Resultado:
+# Resultado df3:
 #       idade   altura
 # 0     50      1.50
 # 1     36      1.73
 # 2     2       0.61
 # 0     50      1.50    Nova linha inserida!
 
-# ----------
+# ------------------------------
+# Duplicatas e Índices
+# df3 = pd.concat([df, df2])
+#  df3
+#       idade   altura
+# 0     50      1.50
+# 1     36      1.73
+# 2     2       0.61
+# 0     50      1.50        A primeira e a última linha são iguais
+
+
 
 
 
