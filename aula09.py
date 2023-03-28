@@ -95,18 +95,18 @@
 # -----------------------------------------------
 # DataFrame - Entradas (* CUIDADO!)
 
-import pandas as pd
+# import pandas as pd
 
-dados = {
-'nome': ["Ana", "Bob",
-"Cleo"],
-'idade': [50, 36, 2],
-'altura': [1.5, 1.73, .61]
-}
+# dados = {
+# 'nome': ["Ana", "Bob",
+# "Cleo"],
+# 'idade': [50, 36, 2],
+# 'altura': [1.5, 1.73, .61]
+# }
 
-serie1 = pd.Series(dados)
-df1 = pd.DataFrame(serie1, index=['a', 'nome', 'c'])   #dois parametros passados na construção do dataframe
-print(df1)                                          #serie1 e index que recebe uma lista de indices
+# serie1 = pd.Series(dados)
+# df1 = pd.DataFrame(serie1, index=['a', 'nome', 'c'])   #dois parametros passados na construção do dataframe
+# print(df1)                                          #serie1 e index que recebe uma lista de indices
                                                     #que não estão na lista original então nada será
                                                     # impresso na saída, só NaN. Uma coluna só [0]
 
@@ -178,30 +178,30 @@ print(df1)                                          #serie1 e index que recebe u
 # ---------
 # método describe()
 
-import pandas as pd
-dados = {
-'nome': ["Ana", "Bob", "Cleo"],
-'idade': [50, 36, 2],
-'altura': [1.5, 1.73, .61]
-}
+# import pandas as pd
+# dados = {
+# 'nome': ["Ana", "Bob", "Cleo"],
+# 'idade': [50, 36, 2],
+# 'altura': [1.5, 1.73, .61]
+# }
 
-df1 = pd.DataFrame(dados)
+# df1 = pd.DataFrame(dados)
 # print(df1)
 # print(df1.describe())
 
 # Qual a maior idade encontrada no data frame?
-maxidade = df1['idade'].max()
-# ● Quem é mais baixo?
-minaltura = df1['altura'].min()
-# ● Qual a média de altura?
-mediaaltura = df1['altura'].mean()
-# Qual a soma das idades?
-somaidades = df1['idade'].sum()
+# maxidade = df1['idade'].max()
+# # ● Quem é mais baixo?
+# minaltura = df1['altura'].min()
+# # ● Qual a média de altura?
+# mediaaltura = df1['altura'].mean()
+# # Qual a soma das idades?
+# somaidades = df1['idade'].sum()
 
-print(maxidade)
-print(minaltura)
-print(mediaaltura)
-print(somaidades)
+# print(maxidade)
+# print(minaltura)
+# print(mediaaltura)
+# print(somaidades)
 
 # ---------------------------
 # Operações
@@ -438,7 +438,7 @@ print(somaidades)
     # temos um dado que parece uma data (ano-mês-dia).
 # Vamos verificar?
 #  type(df['data'][0])   acesso ao arquivo 'df', coluna 'data', indice '[0]'
-# class 'str'>    
+# <class 'str'>    
         # = o valor é uma string, para o sistema
 
 # Tranformando em data de fato:
@@ -497,3 +497,4 @@ print(somaidades)
 # 2022 1147776
 # Freq: A-DEC, Name: atendimentos, dtype: int64
 
+# ---------------
