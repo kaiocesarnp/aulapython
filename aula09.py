@@ -411,6 +411,92 @@ print(somaidades)
 # 999     2020-04-26      4356
 # [1000 rows x 2 columns]
 
+# ---------------
+# Agrupamento e contagem
+# Quantas vezes cada data aparece no DataFrame?
+# arquivo.groupby("data").count()
+
+# data  
+# 2018-01-02    3      vezes que cada data aparece
+# 2018-01-03    1
+# 2018-01-05    1
+# 2018-01-07    1
+# 2018-01-08    3
+# ... ...
+# 2022-03-11    1
+# 2022-03-14    3
+# 2022-03-17    1
+# 2022-03-21    2
+# 2022-03-22    2
+
+# -------------
+# Qual o acumulado de atendimentos por data?
+# arquivo.groupby("data").sum()
+
+# ----------
+# Ao observarmos a primeira coluna do DataFrame anterior,
+    # temos um dado que parece uma data (ano-mês-dia).
+# Vamos verificar?
+#  type(df['data'][0])   acesso ao arquivo 'df', coluna 'data', indice '[0]'
+# class 'str'>    
+        # = o valor é uma string, para o sistema
+
+# Tranformando em data de fato:
+# Para facilitar comparações, temos que transformar a primeira
+# coluna em um tipo "data"...
+# import pandas as pd
+# import sys
+# import datetime
+
+# arquivo = pd.read_csv(sys.argv[1], names=['data', 'atendimentos'])
+# arquivo['data'] = pd.to_datetime(arquivo['data'])  = converte a coluna data para data de fato
+
+# print(type(arquivo['data'][0]))
+        # = <class 'pandas._libs.tslibs.timestamps.Timestamp'>
+
+# -----------------
+# arquivo['data'].describe()
+# count 1000    total linhas
+# unique 734    734 das linhas são unicas
+# top 2019-11-26 00:00:00   data que mais aparece
+# freq 5                frequencia com que ela aparece
+# first 2018-01-02 00:00:00     data minima 
+# last 2022-03-22 00:00:00      data maxima
+# Name: data, dtype: object     
+
+# --------
+# Lidando com datas
+# Podemos precisar comparar datas no nosso DataFrame.
+# Por exemplo:
+# Quais dados tem data antes de certa data?
+    # df['data'][df['data'] < datetime.datetime(2018, 1, 1)]
+        # quais elementos da coluna df data que tem uma data menor que 1/1/2018
+# Retorno:
+# Series([], Name: data, dtype: datetime64[ns])
+    # vazia, pois não ha nada antes da data mencionada
+
+# Quais dados possuem uma data específica?
+# ▸ df['data'][df['data'] == datetime.datetime(2018, 12, 10)]
+# Retorno:
+# 260 2018-12-10
+# 492 2018-12-10
+# 596 2018-12-10
+# 617 2018-12-10
+# Name: data, dtype: datetime64[ns]
+
+# Quantos atendimentos foram feitos por ano?
+#  df.groupby(df['data'].dt.to_period('Y'))['atendimentos'].sum()
+        # dt = metodo que permite o acesso a uma estrutura de dados dentro do dataframe 
+            # to_period = por periodo / (y) = year/ ano, mas pode ser mes, dia da semana...
+# data
+# 2018 6116615
+# 2019 6772594
+# 2020 5985430
+# 2021 5130308
+# 2022 1147776
+# Freq: A-DEC, Name: atendimentos, dtype: int64
+
+
 
 
 
