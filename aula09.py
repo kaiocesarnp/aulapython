@@ -488,22 +488,12 @@ print(somaidades)
 #  df.groupby(df['data'].dt.to_period('Y'))['atendimentos'].sum()
         # dt = metodo que permite o acesso a uma estrutura de dados dentro do dataframe 
             # to_period = por periodo / (y) = year/ ano, mas pode ser mes, dia da semana...
-# data
+
+# data Atendimentos
 # 2018 6116615
 # 2019 6772594
 # 2020 5985430
 # 2021 5130308
 # 2022 1147776
 # Freq: A-DEC, Name: atendimentos, dtype: int64
-
-
-
-
-
-
-
-
-
-
-
 
