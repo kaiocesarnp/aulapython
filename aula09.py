@@ -301,6 +301,22 @@ print(somaidades)
 # 2     2       0.61
 # 3     50      1.50
 
+# ----------
+# Ajuste de índices 2
+# Para evitar o problema da remoção de índices duplicados:
+#df3 = pd.concat([df, df2])
+#df3.reset_index()
+    # Cria novos indices, mas mantem os orignais numa nova coluna, cujo o nome é 'index' 
+
+# Resultado:
+
+#    index idade  altura
+# 0   0     50     1.50
+# 1   1     36     1.73
+# 2   2     2      0.61
+# 3   0     50     1.50
+
+
 
 
 
