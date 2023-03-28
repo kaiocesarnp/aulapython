@@ -172,3 +172,34 @@ print(df1)                                          #serie1 e index que recebe u
 # Métodos
 # Acesso às dimensões
 
+# print(df.index) = mostra os indices do dataframe
+# print(df.columns) = mostra as colunas do dataframe
+
+# ---------
+# método describe()
+
+import pandas as pd
+dados = {
+'nome': ["Ana", "Bob", "Cleo"],
+'idade': [50, 36, 2],
+'altura': [1.5, 1.73, .61]
+}
+
+df1 = pd.DataFrame(dados)
+# print(df1)
+# print(df1.describe())
+
+# Qual a maior idade encontrada no data frame?
+maxidade = df1['idade'].max()
+# ● Quem é mais baixo?
+minaltura = df1['altura'].min()
+# ● Qual a média de altura?
+mediaaltura = df1['altura'].mean()
+# Qual a soma das idades?
+somaidades = df1['idade'].sum()
+
+print(maxidade)
+print(minaltura)
+print(mediaaltura)
+print(somaidades)
+
