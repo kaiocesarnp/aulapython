@@ -391,6 +391,25 @@ print(somaidades)
 # 3 N/D     50      1.50    N/D
 
 # --------------------
+# Carga de arquivos CSV
+# O carregamento de um arquivo CSV no Pandas é muito fácil:
+# import pandas as pd
+# arquivo = pd.read_csv('processados.csv', names=['data', 'atendimentos'])
+# print(arquivo)
+
+#           data      atendimentos
+# 0       2018-01-08      20722
+# 1       2018-06-18      12008
+# 2       2021-11-13      39402
+# 3       2018-10-03      20094
+# 4       2022-02-05      840
+# .. ... ...
+# 995     2022-02-11      18455
+# 996     2021-09-04      13438
+# 997     2019-10-18      39686
+# 998     2018-07-20      48460
+# 999     2020-04-26      4356
+# [1000 rows x 2 columns]
 
 
 
