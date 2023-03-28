@@ -288,6 +288,19 @@ print(somaidades)
     # O “drop_duplicates()” atua sobre os dados.
         # Logo, sua execução irá ignorar os índices e considerar os valores das colunas…
 
+# ------------
+# Ajuste de índices 1
+# Para evitar o problema da remoção de índices duplicados:
+    # Utilize 'pd.concat([df, df2], ignore_index=True)'
+        # Os índices são refeitos com uma nova sequência
+
+# Resultado:
+#       idade   altura
+# 0     50      1.50
+# 1     36      1.73
+# 2     2       0.61
+# 3     50      1.50
+
 
 
 
