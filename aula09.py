@@ -279,6 +279,16 @@ print(somaidades)
 # 2     2       0.61
 # 0     50      1.50        A primeira e a última linha são iguais
 
+# se fizer um 'df3.drop(0)' remove todos os indices zero [0] do dataframe
+    # O “drop()”, quando recebe apenas um argumento, atua sobre o índice.
+        # Logo, “drop(0)” remove todos os índices com esse valor…
+
+# SOULÇÃO:
+# df3.drop_duplicates() = conserva o primeiro valor e remove os outros iguais a ele
+    # O “drop_duplicates()” atua sobre os dados.
+        # Logo, sua execução irá ignorar os índices e considerar os valores das colunas…
+
+
 
 
 
