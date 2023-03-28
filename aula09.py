@@ -316,6 +316,85 @@ print(somaidades)
 # 2   2     2      0.61
 # 3   0     50     1.50
 
+# ---------
+# Já a utilização de 'df3.reset_index(drop=True)' remove os indices originais
+
+#       idade   altura
+# 0     50      1.50
+# 1     36      1.73
+# 2     2       0.61
+# 3     50      1.50
+
+# ------------
+# Para evitar reatribuição:
+# df3.reset_index(drop=True, inplace=True)
+
+# ------------
+# Dados faltantes (identificação)
+# Suponha o seguinte DataFrame:
+# df
+#   nome    idade altura peso
+# 0 Ana     50      1.50 1
+# 1 Bob     36      1.73 2
+# 2 Cleo    2       0.61 3
+
+
+# Suponha outro Dataframe:
+# # df2
+#   idade   altura
+# 0 50       1.50
+
+# Ao concatenarmos ambos, temos:
+# >>> df3 = pd.concat([df, df2], ignore_index=True)
+#   nome    idade altura    peso
+# 0 Ana     50      1.50    51.0
+# 1 Bob     36      1.73    75.0
+# 2 Cleo    2       0.61    7.0
+# 3 NaN     50      1.50    NaN
+
+
+# Para identificar dados faltatens utiliza-se 'df3.isna()'
+#   nome    idade   altura    peso
+# 0 False   False   False     False
+# 1 False   False   False     False
+# 2 False   False   False     False
+# 3 True    False   False     True
+
+# ------------
+# Descartar os dados faltantes
+# df3.dropna()
+
+#   nome    idade altura    peso
+# 0 Ana     50      1.50    51.0
+# 1 Bob     36      1.73    75.0
+# 2 Cleo    2       0.61    7.0
+# 3 NaN     50      1.50    NaN   -> Esta linha é descartada ao utlizar o comando
+
+# -----------
+# Preenchê-los de outra forma
+#  df3.fillna(-1)
+
+#   nome    idade altura    peso
+# 0 Ana     50      1.50    51.0
+# 1 Bob     36      1.73    75.0
+# 2 Cleo    2       0.61    7.0
+# 3 -1      50      1.50    -1.0
+
+# ----------
+# Preenchê-los de outra forma
+# df3.fillna("N/D")
+
+#   nome    idade   altura  peso
+# 0 Ana     50      1.50    51.0
+# 1 Bob     36      1.73    75.0
+# 2 Cleo    2       0.61    7.0
+# 3 N/D     50      1.50    N/D
+
+# --------------------
+
+
+
+
 
 
 
