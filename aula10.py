@@ -23,9 +23,17 @@ dados = {'nome': ["Ana", "Bob", "Cleo"],
 df = pd.DataFrame(dados, columns = ['nome', 'idade', 'altura'])
 
 # Gerando gráficos:
-                                            # o 'plot' gera um objeto gráfico em memória
-df.plot(x='idade', y='altura', kind='bar') #'kind = 'bar'' = tipo de gráfico = barra
-plt.show() #'plt' vem da importação de matplotlib e 'show' é para mostrar o gráfico
+#                                             # o 'plot' gera um objeto gráfico em memória
+# df.plot(x='idade', y='altura', kind='bar') #'kind = 'bar'' = tipo de gráfico = barra
+# plt.show() #'plt' vem da importação de matplotlib e 'show' é para mostrar o gráfico
+
+# Organizar o eixo 'x' de forma ascendente, do menor para o maior:
+
+sdf = df.sort_values('idade') #cria-se um novo dataframe, que é uma versão do original com os valores ordeados (sort_values) na coluna 'idade'
+sdf.plot(x='idade', y='altura', kind='bar')
+plt.show()
+
+# ---------------------
 
 
 
