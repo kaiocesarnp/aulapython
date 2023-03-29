@@ -11,5 +11,24 @@
 # import pandas as pd
 # import matplotlib.pyplot as plt
 
+# Visualização de DataFrames com matplotlib
+# Relembrando o DataFrame de pessoas:
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dados = {'nome': ["Ana", "Bob", "Cleo"],
+ 'idade': [50, 36, 2],
+ 'altura': [1.5, 1.73, .61]}
+df = pd.DataFrame(dados, columns = ['nome', 'idade', 'altura'])
+
+# Gerando gráficos:
+                                            # o 'plot' gera um objeto gráfico em memória
+df.plot(x='idade', y='altura', kind='bar') #'kind = 'bar'' = tipo de gráfico = barra
+plt.show() #'plt' vem da importação de matplotlib e 'show' é para mostrar o gráfico
+
+
+
+
 
 
