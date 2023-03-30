@@ -34,4 +34,26 @@ sdf.plot(x='idade', y='altura', kind='bar')
 plt.show()
 
 # ---------------------
+# OUTROS TIPOS DE GRÁFICOS
+
+# Top 5 (five):
+
+#       MUNICÍPIO       CASOS       ÓBITOS POR COVID-19
+# 20    Curitiba        245996          8163
+# 305   Londrina        144141          2397
+# 262   Maringá         115613          1735
+# 44    Ponta Grossa    80137           1471
+# 143   Cascavel        75249           1207
+
+# forma mais simples:
+# top5.plot(kind='bar') 'top5' = nome do dataframe, 'kind=bar' = tipo de gráfico, barra
+# plt.show()
+
+# ------
+# rotular o eixo x de acordo com a coluna “MUNICÍPIOS”:
+# top5.plot(kind='barh', x='MUNICÍPIO', y=['CASOS', 'ÓBITOS POR COVID-19'])
+# plt.show()
+            # barh = barra horizontal
+
+
 
