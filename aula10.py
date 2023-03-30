@@ -151,16 +151,16 @@
 # Vamos exibir em um gráfico de dispersão a relação entre a 
     # nota na primeira com a segunda prova para os alunos.
 
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+# import pandas as pd
+# import seaborn as sns
+# import matplotlib.pyplot as plt
 
-notas_df = pd.read_csv("c:/users/particular/desktop/ExemploNotas2.csv",delimiter=';')
-sns.relplot(data=notas_df)
-# sns.relplot(data=notas_df, x="Prova1", y="Prova2")
-# sns.set_theme()
-# sns.set_theme(palette="icefire")
-plt.show()
+# notas_df = pd.read_csv("c:/users/particular/desktop/ExemploNotas2.csv",delimiter=';')
+# sns.relplot(data=notas_df)
+# # sns.relplot(data=notas_df, x="Prova1", y="Prova2")
+# # sns.set_theme()
+# # sns.set_theme(palette="icefire")
+# plt.show()
 
 
 # O Seaborn possui vários temas padrão para estilizar o gráfico
@@ -212,5 +212,49 @@ plt.show()
 # plt.show()
 
 # ----------------
+# Regressões
+# O Seaborn possui funções prontas para automaticamente criar regressões e mostrá-las em gráficos
 
+# regplot
+# A função regplot por padrão cria uma regressão linear com os dados.
+
+# sns.regplot(data=Dados, x=colX, y=colY)
+# Dados: conjunto de dados
+# colX: coluna que contém o eixo X
+# colY: coluna que contém o eixo Y
+
+# Exemplo
+# Vamos considerar os dados do valor diário das ações da
+# Petrobrás entre 01/2021 e 03/2022.
+# Uma regressão linear vai mostrar se o valor da ação está com tendência de alta ou baixa nesse período
+
+# import pandas as pd
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+
+# petro_df = pd.read_csv("c:/users/particular/desktop/PETR3.SA.csv",delimiter=',', usecols=["Adj Close"])
+# petro_df.insert(0, "Index", range(0, len(petro_df))) #'insert' = criação de uma coluna, indice 0. Range = começa no 0 e vai até o final do df
+
+# # print(petro_df)
+
+# sns.regplot(data=petro_df, x="Index", y="Adj Close");
+# plt.show()
+
+# ------------
+# Misturando Tudo
+# O Seaborn utiliza o Matplotlib
+# Podemos modificar os gráficos gerados pelo Seaborn normalmente utilizando o que foi aprendido para o Matplotlib
+# Vamos mostrar uma regressão apenas com os últimos 30 dias
+    #da Petrobrás, e inserir o resto da série histórica diretamente via comandos do Matplotlib
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+petro_df = pd.read_csv("c:/users/particular/desktop/PETR3.SA.csv",delimiter=',', usecols=["Adj Close"])
+petro_df.insert(0, "Index", range(0, len(petro_df)))
+
+sns.regplot(data=petro_df[len(petro_df)-30:len(petro_df)], x="Index", y="Adj Close", scatter=False); #scatter=False para não mostrar o gráfico de dispersão da regressão.
+plt.plot(petro_df["Index"],petro_df["Adj Close"]) #insere a série histórica inteira
+plt.show()
 
