@@ -14,13 +14,13 @@
 # Visualização de DataFrames com matplotlib
 # Relembrando o DataFrame de pessoas:
 
-import pandas as pd
-import matplotlib.pyplot as plt
+# import pandas as pd
+# import matplotlib.pyplot as plt
 
-dados = {'nome': ["Ana", "Bob", "Cleo"],
- 'idade': [50, 36, 2],
- 'altura': [1.5, 1.73, .61]}
-df = pd.DataFrame(dados, columns = ['nome', 'idade', 'altura'])
+# dados = {'nome': ["Ana", "Bob", "Cleo"],
+#  'idade': [50, 36, 2],
+#  'altura': [1.5, 1.73, .61]}
+# df = pd.DataFrame(dados, columns = ['nome', 'idade', 'altura'])
 
 # Gerando gráficos:
 #                                             # o 'plot' gera um objeto gráfico em memória
@@ -29,9 +29,9 @@ df = pd.DataFrame(dados, columns = ['nome', 'idade', 'altura'])
 
 # Organizar o eixo 'x' de forma ascendente, do menor para o maior:
 
-sdf = df.sort_values('idade') #cria-se um novo dataframe, que é uma versão do original com os valores ordeados (sort_values) na coluna 'idade'
-sdf.plot(x='idade', y='altura', kind='bar')
-plt.show()
+# sdf = df.sort_values('idade') #cria-se um novo dataframe, que é uma versão do original com os valores ordeados (sort_values) na coluna 'idade'
+# sdf.plot(x='idade', y='altura', kind='bar')
+# plt.show()
 
 # ---------------------
 # OUTROS TIPOS DE GRÁFICOS
@@ -67,7 +67,33 @@ plt.show()
 #     color='red') # cor das barras
 # plt.show()
 
+# -------
+# Com eixo y rotulado:
+# plt.ylabel("Quantidade")
 
+# -------
+# Com rótulos do eixo x rotacionados 45 graus:
+# plt.xticks(rotation=45)    = pontos marcados no eixo x
 
+# -------
+# Em escala logarítmica:
+# plt.yscale("log")
 
+# ---------------------------
+# Gráfico de Pizza:
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("c:/users/particular/desktop/obitoscasos.csv", 
+                 delimiter=";", usecols=['MUNICÍPIO', 'CASOS', 'ÓBITOS POR COVID-19'])
+    # cria-se um dataframe 'df', pd.read_csv lê o csv, delimitador é ponto e virgula, e usa as colunas municipios, casos e obitos
+df.sort_values(by=['CASOS'], inplace=True, ascending=False)
+    # 'sort_values' ordena os valores, 'by' = por casos, 'inplace=true' tira a necessidade de fazer uma ordenação, 'asceding=false' vai do menor para o maior
+top5 = df.head(5) # Obtém os 5 maiores valores
+
+#kind=pie = pizza/torta
+top5.plot(kind='pie', y='CASOS', labels=top5['MUNICÍPIO'], autopct='%1.1f%%')
+            # labels = rotulos, autopct='%1.1f%% = aceita dados em ponto flutuante, tem uma casa após o float e o porcento na frente
+plt.show()
 
