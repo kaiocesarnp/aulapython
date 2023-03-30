@@ -86,14 +86,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 df = pd.read_csv("c:/users/particular/desktop/obitoscasos.csv", 
-                 delimiter=";", usecols=['MUNICÍPIO', 'CASOS', 'ÓBITOS POR COVID-19'])
+                 delimiter=";", usecols=['municipio', 'data último óbito', 'dias após último óbito'])
     # cria-se um dataframe 'df', pd.read_csv lê o csv, delimitador é ponto e virgula, e usa as colunas municipios, casos e obitos
-df.sort_values(by=['CASOS'], inplace=True, ascending=False)
+df.sort_values(by=['data último óbito'], inplace=True, ascending=False)
     # 'sort_values' ordena os valores, 'by' = por casos, 'inplace=true' tira a necessidade de fazer uma ordenação, 'asceding=false' vai do menor para o maior
 top5 = df.head(5) # Obtém os 5 maiores valores
 
 #kind=pie = pizza/torta
-top5.plot(kind='pie', y='CASOS', labels=top5['MUNICÍPIO'], autopct='%1.1f%%')
+top5.plot(kind='pie', y='data último óbito', labels=top5['municipio'], autopct='%1.1f%%')
             # labels = rotulos, autopct='%1.1f%% = aceita dados em ponto flutuante, tem uma casa após o float e o porcento na frente
 plt.show()
 
