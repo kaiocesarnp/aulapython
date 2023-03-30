@@ -114,4 +114,78 @@
 # mediamovel = dfcovid.Novos.rolling(7).mean() = nova estrutura de dados chamada 'mediamovel', baseada no df do covid, na coluna novos, usando o metodo 'rolling' com a janela deslizante pulando de 7 em 7 pontos, e tire a media(mean)
 # mediamovel.plot(label='Média Móvel', color='orange')
 
+# ----------
+# Para outros tipos de rolling, basta substituir mean() pelo
+    # método que se deseja, por exemplo, std().
+# Tipos de rolling possíveis:
+# https://pandas.pydata.org/docs/reference/window.html
+
+# ------------------------------
+# SEABORN
+# Ferramenta para visualização de dados baseada em Matplotlib.
+# Interface de (ainda mais) alto nível que o Matplotlib para geração de gráficos.
+
+# Algumas funções:
+# relplot
+# relplot é uma função flexível para gerar gráficos mostrando as relações entre variáveis.
+# Por padrão, os gráficos gerados são de dispersão (scatter)
+# Veja a documentação em:
+# seaborn.pydata.org/generated/seaborn.relplot.html
+
+# import seaborn as sns
+# sns.relplot(data=dados, x=nomeX, y=nomeY)
+
+# dados: conjunto de dados (e.g., dataframe Pandas)
+# x = nome da coluna que possui o eixo X
+# y = nome da coluna que possui o eixo Y
+
+# -------------
+# Exemplo:
+# Considere o arquivo ExemploNotas2.csv
+#       Nome;  Prova1;  Prova2;     Período;    Escola
+# Aluno   0;    100;    100;        Manhã;      Escola 1
+# Aluno   1;    93;     92;         Manhã;      Escola 1
+# Aluno   2;    93;     100;        Manhã;      Escola 1
+# Aluno   6;    100;    95;         Manhã;      Escola 1
+
+# Vamos exibir em um gráfico de dispersão a relação entre a 
+    # nota na primeira com a segunda prova para os alunos.
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+notas_df = pd.read_csv("c:/users/particular/desktop/ExemploNotas2.csv",delimiter=';')
+sns.relplot(data=notas_df)
+# sns.relplot(data=notas_df, x="Prova1", y="Prova2")
+# sns.set_theme()
+# sns.set_theme(palette="icefire")
+plt.show()
+
+
+# O Seaborn possui vários temas padrão para estilizar o gráfico
+# Use a função sns.set_theme() [mencionado no código acima]
+# Você pode chamar a função sem parâmetros (vai aplicar o estilo padrão), 
+    # ou modificar paletas, fontes, estilos, …
+# Veja a documentação aqui
+# seaborn.pydata.org/generated/seaborn.set_theme.html
+
+# ----------------
+# Adicionando informações
+# Vamos mudar a cor e o formato de cada ponto de acordo com o período que o aluno estuda
+# sns.relplot(..., hue=cor, style=estilo)
+# cor: coluna no datraframe que controla a cor
+# estilo = coluna no datraframe que controla o estilo
+
+# import pandas as pd
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+# notas_df = pd.read_csv("c:/users/particular/desktop/ExemploNotas2.csv",delimiter=';')
+# sns.set_theme(palette="icefire")
+# sns.relplot(data=notas_df, x="Prova1", y="Prova2", hue="Período", style="Período")
+# plt.show()
+
+# ----------------
+
+
 
