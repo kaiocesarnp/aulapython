@@ -186,6 +186,31 @@ plt.show()
 # plt.show()
 
 # ----------------
+# Múltiplos Plots
+# A opção col indica uma coluna para separar a série em múltiplos gráficos
+# Vamos criar um gráfico por escola
 
+# import pandas as pd
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+
+# notas_df = pd.read_csv("c:/users/particular/desktop/ExemploNotas2.csv",delimiter=';')
+# sns.set_theme(palette="icefire")
+# sns.relplot(data=notas_df, x="Prova1", y="Prova2", hue="Período", style="Período", col="Escola")
+# plt.show()
+
+# ----------------
+# Size
+# O parâmetro size coloca os tamanhos dos marcadores de acordo com determinada coluna
+
+# import pandas as pd
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+# notas_df = pd.read_csv("c:/users/particular/desktop/ExemploNotas2.csv",delimiter=';')
+# sns.set_theme(palette="icefire")
+# sns.relplot(data=notas_df, x="Prova1", y="Prova2", hue="Período", style="Período", col="Escola", size="Idade")
+# plt.show()
+
+# ----------------
 
 
