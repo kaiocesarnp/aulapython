@@ -55,5 +55,19 @@ plt.show()
 # plt.show()
             # barh = barra horizontal
 
+# ------
+# E se quisermos ver as barras acumuladas?
+# ax = top5.plot(kind='bar', x='MUNICÍPIO', y='CASOS')
+#     # variavel 'ax' recebe o daraframe 'top5', criado com 'plot', tipo barra e recebe municipios e casos
+
+# top5.plot(kind='bar',
+#     x='MUNICÍPIO',
+#     y='ÓBITOS POR COVID-19',  # eixo y agora é obitos
+#     ax=ax,   # usa-se como eixo de pilotagem o primero 'ax', mencionado no começo
+#     color='red') # cor das barras
+# plt.show()
+
+
+
 
 
