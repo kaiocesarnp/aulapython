@@ -247,14 +247,40 @@
 # Vamos mostrar uma regressão apenas com os últimos 30 dias
     #da Petrobrás, e inserir o resto da série histórica diretamente via comandos do Matplotlib
 
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+# import pandas as pd
+# import seaborn as sns
+# import matplotlib.pyplot as plt
 
-petro_df = pd.read_csv("c:/users/particular/desktop/PETR3.SA.csv",delimiter=',', usecols=["Adj Close"])
-petro_df.insert(0, "Index", range(0, len(petro_df)))
+# petro_df = pd.read_csv("c:/users/particular/desktop/PETR3.SA.csv",delimiter=',', usecols=["Adj Close"])
+# petro_df.insert(0, "Index", range(0, len(petro_df)))
 
-sns.regplot(data=petro_df[len(petro_df)-30:len(petro_df)], x="Index", y="Adj Close", scatter=False); #scatter=False para não mostrar o gráfico de dispersão da regressão.
-plt.plot(petro_df["Index"],petro_df["Adj Close"]) #insere a série histórica inteira
-plt.show()
+# sns.regplot(data=petro_df[len(petro_df)-30:len(petro_df)], x="Index", y="Adj Close", scatter=False); #scatter=False para não mostrar o gráfico de dispersão da regressão.
+# plt.plot(petro_df["Index"],petro_df["Adj Close"]) #insere a série histórica inteira
+# plt.show()
 
+# ---------------
+# Ajustando polinômios
+# Ao inserir um inteiro N maior que 1 no parâmetro orderint, o Seaborn fará 
+    # um ajuste de um polinômio de grau N nos dados através da função numpy.polyfit do Numpy
+# Veja a teoria sobre interpolação polinomial e ajuste de curvas em prlalmeida.com.br/2021/10/29/numerical-analysis
+
+
+# import pandas as pd
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+
+# petro_df = pd.read_csv("c:/users/particular/desktop/PETR3.SA.csv",delimiter=',', usecols=["Adj Close"])
+# petro_df.insert(0, "Index", range(0, len(petro_df)))
+
+# sns.regplot(data=petro_df, x="Index", y="Adj Close", order=5)
+# plt.show()
+
+# Esses são apenas alguns exemplos sobre o que é possível fazer com o Seaborn
+# Veja mais na documentação
+
+# Distribuições e histogramas
+    # seaborn.pydata.org/tutorial/distributions.html
+# Mapas de calor
+    # seaborn.pydata.org/examples/spreadsheet_heatmap.html
+
+# -----------------
