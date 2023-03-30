@@ -82,18 +82,36 @@
 # ---------------------------
 # Gráfico de Pizza:
 
-import pandas as pd
-import matplotlib.pyplot as plt
+# import pandas as pd
+# import matplotlib.pyplot as plt
 
-df = pd.read_csv("c:/users/particular/desktop/obitoscasos.csv", 
-                 delimiter=";", usecols=['municipio', 'data último óbito', 'dias após último óbito'])
-    # cria-se um dataframe 'df', pd.read_csv lê o csv, delimitador é ponto e virgula, e usa as colunas municipios, casos e obitos
-df.sort_values(by=['data último óbito'], inplace=True, ascending=False)
-    # 'sort_values' ordena os valores, 'by' = por casos, 'inplace=true' tira a necessidade de fazer uma ordenação, 'asceding=false' vai do menor para o maior
-top5 = df.head(5) # Obtém os 5 maiores valores
+# df = pd.read_csv("c:/users/particular/desktop/obitoscasos.csv", 
+#                  delimiter=";", usecols=['municipio', 'data último óbito', 'dias após último óbito'])
+#     # cria-se um dataframe 'df', pd.read_csv lê o csv, delimitador é ponto e virgula, e usa as colunas municipios, casos e obitos
+# df.sort_values(by=['data último óbito'], inplace=True, ascending=False)
+#     # 'sort_values' ordena os valores, 'by' = por casos, 'inplace=true' tira a necessidade de fazer uma ordenação, 'asceding=false' vai do menor para o maior
+# top5 = df.head(5) # Obtém os 5 maiores valores
 
-#kind=pie = pizza/torta
-top5.plot(kind='pie', y='data último óbito', labels=top5['municipio'], autopct='%1.1f%%')
-            # labels = rotulos, autopct='%1.1f%% = aceita dados em ponto flutuante, tem uma casa após o float e o porcento na frente
-plt.show()
+# #kind=pie = pizza/torta
+# top5.plot(kind='pie', y='data último óbito', labels=top5['municipio'], autopct='%1.1f%%')
+#             # labels = rotulos, autopct='%1.1f%% = aceita dados em ponto flutuante, tem uma casa após o float e o porcento na frente
+# plt.show()
+
+# -------------------------
+# Médias Móveis
+# Uma média móvel usa “janelas deslizantes” para mostrar a média de um período de tempo, 
+    # evitando conclusõesimprecisas devido a picos e vales sazonais.
+    #Permite melhor visualização das tendências dos dados
+    #“Achata” as flutuações que dificultam a interpretação
+
+# Com a média móvel e janela de 7 dias
+# Trecho de Código:
+
+# ax=dfcovid['Novos'].plot(label="Novos Casos") 'ax' = variavel, dfcovid = dataframe, 'novos' = coluna usada, plot(label) rotulado como 'novos casos'. Como não foi passado nada, será linha ao inves de barras, pizza..
+# ax.set_ylabel("Casos") = nome ao lado, y = alturua
+# ax.set_title("COVID-19 no PR")   #título do gráfico
+
+# mediamovel = dfcovid.Novos.rolling(7).mean() = nova estrutura de dados chamada 'mediamovel', baseada no df do covid, na coluna novos, usando o metodo 'rolling' com a janela deslizante pulando de 7 em 7 pontos, e tire a media(mean)
+# mediamovel.plot(label='Média Móvel', color='orange')
+
 
