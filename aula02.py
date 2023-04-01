@@ -2,7 +2,7 @@
 
 # if resposta != 42:
 #     print("Errou, tente novamente!")
-
+ 
 #---------------------------
 
 # idade = int(input("Digite sua idade: "))
